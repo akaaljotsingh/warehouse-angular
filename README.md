@@ -1,4 +1,4 @@
-# Angular Boilerplate
+# Angular Bootstrap Boilerplate
 
 This project was generated with:
 * [Angular CLI](https://github.com/angular/angular-cli) v7.0.6.
