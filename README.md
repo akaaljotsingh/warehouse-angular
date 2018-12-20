@@ -1,6 +1,10 @@
-# Boilerplate
+# Angular Boilerplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+This project was generated with:
+[Angular CLI](https://github.com/angular/angular-cli) v7.0.6.
+[Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) v4.1
+[Font-awesome](https://fontawesome.com/) v4.7.0
+[ng-bootstrap](https://ng-bootstrap.github.io/) v4
 
 ## Development server
 
