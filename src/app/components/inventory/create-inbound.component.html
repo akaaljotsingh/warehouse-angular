@@ -1,0 +1,279 @@
+<div class="container-fluid disable-text-selection">
+    <div class="row app-row">
+        <div class="col-12">
+            <div class="mb-3">
+                <h1 class="font-weight-bold">Create Inbound Orders</h1>
+                <div class="float-sm-right text-zero">
+                    <button type="button" class="btn btn-outline-secondary default btn-sm mb-1">Import via CSV
+                    </button>
+                    <button type="button" class="btn btn-primary btn-sm default  mb-1 ml-2">Help</button>
+                </div>
+            </div>
+            <div class="separator mb-5"></div>
+        </div>
+    </div>
+    <!--==============================================================-->
+    <div class="row app-row">
+        <div class="col-12 mb-4">
+            <div class="row">
+
+                <div class="col-3">
+                        <div class="form-group">
+                            <select id="customer" class="form-control">
+                                <option selected="selected">Choose Customer...</option>
+                                <option>John Doe</option>
+                                <option>Mark pimpson</option>
+                            </select>
+                        </div>
+                    </div>
+
+                <div class="col-3 new-supplier-div">
+                    <div class="create-new-supplier mt-2">
+                        or <a href="" data-toggle="modal" data-backdrop="static" data-target="#add-quick-customer">Create
+                        New Customer</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="create-new-supplier mt-2 float-right">
+                        <h5><b>#S045768</b>
+                            <a href="#"><i class="fa fa-pencil-square-o ml-2" aria-hidden="true"></i></a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="form row">
+                        <div class="col-lg-6 supplier-feilds">
+                            <div class="form-group">
+                                <label>Bill to*</label>
+                                <p class="bdr-bottom"><b>Head Office</b></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 supplier-feilds">
+                            <div class="form-group">
+                                <label>Ship To</label>
+                                <p class="bdr-bottom"><b>Head Office</b></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 supplier-feilds">
+                            <div class="form-group">
+                                <label>Ship From</label>
+                                <p class="bdr-bottom"><b>Primary Location</b></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 supplier-feilds">
+                            <div class="form-group">
+                                <label>Contact Person</label>
+                                <select class="form-control select2-single">
+                                    <option label="&nbsp;">&nbsp;</option>
+
+                                    <optgroup>
+                                        <option value="AK">Alaska</option>
+                                        <option value="HI">Hawaii</option>
+                                    </optgroup>
+                                    <optgroup label="Pacific Time Zone">
+                                        <option value="CA">California</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="WA">Washington</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Inbound Date*</label>
+                                <input class="form-control datepicker" placeholder="Select Date">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Phone*</label>
+                                <input class="form-control" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Mode</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected="selected">Choose...</option>
+                                    <option>Trasfer</option>
+                                    <option>Outlet</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Assigned To</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected="selected">Choose...</option>
+                                    <option>John Doe</option>
+                                    <option>Mark Bucket</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                                <div class="form-group" >
+                                    <label>From Address</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected="selected" disabled="disabled">Choose...</option>
+                                        <option>Atrium tower</option>
+                                        <option>Tech</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Driver Name</label>
+                                        <input class="form-control" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Driver Phone</label>
+                                            <input class="form-control" placeholder="Phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Truck Number</label>
+                                                <input class="form-control" placeholder="Phone">
+                                            </div>
+                                        </div>
+                    </div>
+                    <!--==================-->
+                    <div class="add-items-wrapper mt-4">
+                        <table class="table table-bordered">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Item Name</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Room </th>
+                                <th scope="col">Level</th>
+                                <th scope="col">Tax</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <input class="form-control add-item-field" type="text"
+                                           placeholder="Type SKU or name...">
+                                </td>
+                                <td>
+                                    <input type="number" max="999999999" name="variantDefaults.initialStockLevel"
+                                           step="any"
+                                           class="form-control add-item-field" placeholder="" value="1">
+                                </td>
+                                <td>24</td>
+                                <td>
+                                    <input type="number" max="999999999" name="variantDefaults.initialStockLevel"
+                                           step="any"
+                                           class="form-control add-item-field" placeholder="Level 1" value="">
+                                </td>
+                                <td>
+                                    <input type="number" max="999999999" name="variantDefaults.initialStockLevel"
+                                           step="any"
+                                           class="form-control add-item-field" placeholder="Tax" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="text-center">
+                                    <a href="#"> <i class="fa fa-plus" aria-hidden="true"></i> Add another Item</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>Notes</label>
+                                <textarea class="form-control" placeholder="Message to supplier"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--===================================================-->
+<div class="app-menu">
+    <div class="p-4">
+        <div class="scroll">
+            <div class="clearfix">
+                <div class="btns-wrapper  float-right">
+                        <button type="button" class="btn btn-outline-primary btn-sm default mb-1 mr-2">Cancel</button>
+                        <button type="button" class="btn btn-secondary btn-sm default mb-1">Create</button>
+                    </div></div>
+            <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class=""
+                   style=" width:100%; background-color:#ffffff; border-top:1px solid #f1f0f0; border-bottom:1px solid #f1f0f0; border-collapse:separate !important; border-spacing:0;color:#242128; margin:0;padding:30px; padding-top: 0px; padding-bottom: 20px;     margin-top: 20px;     margin-bottom: 20px;">
+                <tr>
+                    <td colspan="3" >&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="width: 100%">
+                        <p href="#"
+                           style="font-size: 13px; text-decoration: none; line-height: 1.6; color:#909090; margin-top:0px; margin-bottom:0; text-align: right;">
+                            Total Units : </p>
+                    </td>
+                    <td style="padding-top:0px; text-align: right;">
+                        <p style="font-size: 13px; line-height: 1.6; color:#303030; margin-bottom:0; margin-top:0; vertical-align:top; white-space:nowrap; margin-left:15px">
+                            28</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="width: 100%">
+                        <p href="#"
+                           style="font-size: 13px; text-decoration: none; line-height: 1.6; color:#909090; margin-top:0px; margin-bottom:0; text-align: right;">
+                            Tax : </p>
+                    </td>
+                    <td style="padding-top:0px; text-align: right;">
+                        <p style="font-size: 13px; line-height: 1.6; color:#303030; margin-bottom:0; margin-top:0; vertical-align:top; white-space:nowrap; margin-left:15px">
+                            $
+                            2.00</p>
+                    </td>
+                </tr>
+                <tr>
+                        <td colspan="2" style="width: 100%">
+                            <p href="#"
+                               style="font-size: 13px; text-decoration: none; line-height: 1.6; color:#909090; margin-top:0px; margin-bottom:0; text-align: right;">
+                                Shipping Charges : </p>
+                        </td>
+                        <td style="padding-top:0px; text-align: right;">
+                            <p style="font-size: 13px; line-height: 1.6; color:#303030; margin-bottom:0; margin-top:0; vertical-align:top; white-space:nowrap; margin-left:15px">
+                                $
+                                20.00</p>
+                        </td>
+                    </tr>
+                <tr>
+                    <td colspan="2" style="width: 100%">
+                        <p href="#"
+                           style="font-size: 13px; text-decoration: none; line-height: 1.6; color:#909090; margin-top:0px; margin-bottom:0; text-align: right;">
+                           <b>Total</b> : </p>
+                    </td>
+                    <td style="padding-top:0px; text-align: right;">
+                        <p style="font-size: 13px; line-height: 1.6; color:#303030; margin-bottom:0; margin-top:0; vertical-align:top; white-space:nowrap; margin-left:15px">
+                            $
+                            22.00</p>
+                    </td>
+                </tr>
+            </table>
+
+            <div>
+                    <p><b>INFO</b><br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi ad non totam enim distinctio,
+                        dolorum id officia optio dicta ducimus incidunt soluta sunt esse reiciendis ex, quod amet
+                        illum quae.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, repudiandae sed. Dicta cum
+                        accusamus esse ipsum ipsa consectetur similique ad? Minima laboriosam, deserunt rerum fuga
+                        id molestias dicta. Aliquam, enim!</p>
+                </div>
+            <!--======-->
+           
+        </div>
+    </div>
+    <a class="app-menu-button d-inline-block d-xl-none" href="#">
+        <i class="simple-icon-refresh"></i>
+    </a>
+</div>

@@ -1,0 +1,438 @@
+<div class="container-fluid disable-text-selection">
+    <div class="row">
+        <div class="col-12">
+            <div class="mb-3">
+                <h1 class="font-weight-bold">Relationships</h1>
+                <div class="float-sm-right text-zero">
+                    <div class="dropdown d-inline-block mr-2" dropdown>
+                        <button id="button-basic" dropdownToggle type="button" class="btn btn-outline-primary default btn-sm dropdown-toggle mb-1"
+                                aria-controls="dropdown-basic">
+                                Bulk Manage<span class="caret"></span>
+                        </button>
+                        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                            role="menu" aria-labelledby="button-basic">
+                          <li role="menuitem"><a class="dropdown-item" href="#">Import Locations</a></li>
+                          <li role="menuitem"><a class="dropdown-item" href="#">Export Locations</a></li>
+                          <li role="menuitem"><a class="dropdown-item" href="#">Edit Relationships</a></li>
+                        </ul>
+                      </div>
+                    <button type="button" class="btn btn-outline-primary btn-sm default mb-1">Help</button>
+                </div>
+            </div>
+        </div>
+        <!--=================-->
+        <div class="col-12 mb-4">
+            <div class="card  dashboard-sq-banner">
+                <div class="card-body row">
+                    <div class="col-10">
+                        <h4 class="text-white">Manage your suppliers, retailers, and customers</h4>
+                        <p class="text-white">
+                            Arethos aggregates your key business relationships in one place. Easily bring up addresses, past orders, and contacts for each business.
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <a href="javascript:void(0)" class="btn btn-light default mt-3" routerLink="/create-relationship">Add New Customer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator mb-5"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="mb-2">
+                        <a class="btn pt-0 pl-0 d-inline-block d-md-none" data-toggle="collapse"
+                           href="#displayOptions"
+                           role="button" aria-expanded="true" aria-controls="displayOptions">
+                            Display Options
+                            <i class="simple-icon-arrow-down align-middle"></i>
+                        </a>
+                        <div class="collapse d-md-block" id="displayOptions">
+                        <span class="mr-3 mb-2 d-inline-block float-md-left">
+                            <a href="#" class="mr-2 view-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19">
+                                    <path class="view-icon-svg" d="M17.5,3H.5a.5.5,0,0,1,0-1h17a.5.5,0,0,1,0,1Z">
+                                    </path>
+                                    <path class="view-icon-svg" d="M17.5,10H.5a.5.5,0,0,1,0-1h17a.5.5,0,0,1,0,1Z">
+                                    </path>
+                                    <path class="view-icon-svg" d="M17.5,17H.5a.5.5,0,0,1,0-1h17a.5.5,0,0,1,0,1Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mr-2 view-icon active">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19">
+                                    <path class="view-icon-svg" d="M17.5,3H6.5a.5.5,0,0,1,0-1h11a.5.5,0,0,1,0,1Z">
+                                    </path>
+                                    <path class="view-icon-svg"
+                                          d="M3,2V3H1V2H3m.12-1H.88A.87.87,0,0,0,0,1.88V3.12A.87.87,0,0,0,.88,4H3.12A.87.87,0,0,0,4,3.12V1.88A.87.87,0,0,0,3.12,1Z">
+                                    </path>
+                                    <path class="view-icon-svg"
+                                          d="M3,9v1H1V9H3m.12-1H.88A.87.87,0,0,0,0,8.88v1.24A.87.87,0,0,0,.88,11H3.12A.87.87,0,0,0,4,10.12V8.88A.87.87,0,0,0,3.12,8Z">
+                                    </path>
+                                    <path class="view-icon-svg"
+                                          d="M3,16v1H1V16H3m.12-1H.88a.87.87,0,0,0-.88.88v1.24A.87.87,0,0,0,.88,18H3.12A.87.87,0,0,0,4,17.12V15.88A.87.87,0,0,0,3.12,15Z">
+                                    </path>
+                                    <path class="view-icon-svg" d="M17.5,10H6.5a.5.5,0,0,1,0-1h11a.5.5,0,0,1,0,1Z">
+                                    </path>
+                                    <path class="view-icon-svg" d="M17.5,17H6.5a.5.5,0,0,1,0-1h11a.5.5,0,0,1,0,1Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="mr-2 view-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19">
+                                    <path class="view-icon-svg"
+                                          d="M7,2V8H1V2H7m.12-1H.88A.87.87,0,0,0,0,1.88V8.12A.87.87,0,0,0,.88,9H7.12A.87.87,0,0,0,8,8.12V1.88A.87.87,0,0,0,7.12,1Z">
+                                    </path>
+                                    <path class="view-icon-svg"
+                                          d="M17,2V8H11V2h6m.12-1H10.88a.87.87,0,0,0-.88.88V8.12a.87.87,0,0,0,.88.88h6.24A.87.87,0,0,0,18,8.12V1.88A.87.87,0,0,0,17.12,1Z">
+                                    </path>
+                                    <path class="view-icon-svg"
+                                          d="M7,12v6H1V12H7m.12-1H.88a.87.87,0,0,0-.88.88v6.24A.87.87,0,0,0,.88,19H7.12A.87.87,0,0,0,8,18.12V11.88A.87.87,0,0,0,7.12,11Z">
+                                    </path>
+                                    <path class="view-icon-svg"
+                                          d="M17,12v6H11V12h6m.12-1H10.88a.87.87,0,0,0-.88.88v6.24a.87.87,0,0,0,.88.88h6.24a.87.87,0,0,0,.88-.88V11.88a.87.87,0,0,0-.88-.88Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </span>
+                            <div class="d-block d-md-inline-block">
+                                    <div class="dropdown d-inline-block mr-2" dropdown>
+                                            <button id="button-basic" dropdownToggle type="button" class="btn btn-outline-dark btn-xs dropdown-toggle"
+                                                    aria-controls="dropdown-basic">
+                                                    Order By<span class="caret"></span>
+                                            </button>
+                                            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                                                role="menu" aria-labelledby="button-basic">
+                                              <li role="menuitem"><a class="dropdown-item" href="#">Date </a></li>
+                                              <li role="menuitem"><a class="dropdown-item" href="#">Name</a></li>
+                                              <li role="menuitem"><a class="dropdown-item" href="#">Type</a></li>
+                                            </ul>
+                                          </div>
+                                <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
+                                    <input placeholder="Search...">
+                                </div>
+                            </div>
+                            <div class="float-md-right">
+                                <span class="text-muted text-small">Displaying 1-10 of 210 items </span>
+                                <div class="dropdown d-inline-block mr-2" dropdown>
+                                        <button id="button-basic" dropdownToggle type="button" class="btn btn-outline-dark btn-xs dropdown-toggle"
+                                                aria-controls="dropdown-basic">
+                                                20<span class="caret"></span>
+                                        </button>
+                                        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu dropdown-menu-right"
+                                            role="menu" aria-labelledby="button-basic">
+                                          <li role="menuitem"><a class="dropdown-item" href="#">20 </a></li>
+                                          <li role="menuitem"><a class="dropdown-item" href="#">40</a></li>
+                                          <li role="menuitem"><a class="dropdown-item" href="#">80</a></li>
+                                        </ul>
+                                      </div>
+                                <!--<div class="btn-group">-->
+                                <!--<div class="btn btn-primary pl-2 pr-0 check-button">-->
+                                <!--<label class="custom-control custom-checkbox mb-0 d-inline-block">-->
+                                <!--<input type="checkbox" class="custom-control-input" id="checkAll">-->
+                                <!--<span class="custom-control-label"></span>-->
+                                <!--</label>-->
+                                <!--</div>-->
+                                <!--<button type="button"-->
+                                <!--class="btn btn-primary dropdown-toggle dropdown-toggle-split pl-2 pr-2"-->
+                                <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                                <!--<span class="sr-only">Toggle Dropdown</span>-->
+                                <!--</button>-->
+                                <!--<div class="dropdown-menu dropdown-menu-right">-->
+                                <!--<a class="dropdown-item" href="#">Action</a>-->
+                                <!--<a class="dropdown-item" href="#">Another action</a>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DataTables_Table_2_wrapper"
+                         class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                        <table class="table table-hover" id="products-table" role="grid"
+                               aria-describedby="DataTables_Table_2_info">
+                            <thead class="thead-light">
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2"
+                                    rowspan="1" colspan="1" aria-sort="ascending"
+                                    aria-label="Name: activate to sort column descending"
+                                > Name 
+                                <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2"
+                                    rowspan="1" colspan="1" aria-sort="ascending"
+                                    aria-label="Name: activate to sort column descending"
+                                >Type
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                    rowspan="1" colspan="1"
+                                    aria-label="Position: activate to sort column ascending"
+                                >Email
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                    rowspan="1" colspan="1"
+                                    aria-label="Office: activate to sort column ascending"
+                                >Phone
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                    rowspan="1" colspan="1"
+                                    aria-label="Age: activate to sort column ascending"
+                                >Fax
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                    rowspan="1" colspan="1"
+                                    aria-label="Start date: activate to sort column ascending"
+                                >Status
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                    rowspan="1" colspan="1"
+                                    aria-label="Salary: activate to sort column ascending"
+                                >Created
+                                <th>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                           
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr role="row" class="odd">
+                                <td>Acme Supplies (DEMO)</td>
+                                <td class="sorting_1">Supplier</td>
+                                <td>Acme324@fmail.com</td>
+                                <td>5467983476</td>
+                                <td>5468923446</td>
+                                <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                <td>15/04/2019</td>
+                                <td>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td>Okuneva Huel (DEMO)</td>
+                                <td class="sorting_1">Supplier</td>
+                                <td>mara73@reilly.com</td>
+                                <td>3467863413</td>
+                                <td>4565789234</td>
+                                <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                <td>12/04/2019</td>
+                                <td>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td>Rice Bode (DEMO)</td>
+                                <td class="sorting_1">Supplier</td>
+                                <td>abigale57@adams.org</td>
+                                <td>5467983476</td>
+                                <td>5468923446</td>
+                                <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                <td>11/03/2019</td>
+                                <td>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td>Parisian Gutmann	 (DEMO)</td>
+                                <td class="sorting_1">Supplier</td>
+                                <td>elroy.keebler@conroy.biz</td>
+                                <td>7634598236</td>
+                                <td>9875634278</td>
+                                <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                <td>10/04/2019</td>
+                                <td>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td>Rodriguez and Sons (DEMO)</td>
+                                <td class="sorting_1">Customer</td>
+                                <td>rosalia.mohr@gutkowski.com</td>
+                                <td>5467983476</td>
+                                <td>5468923446</td>
+                                <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                <td>04/02/2019</td>
+                                <td>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td>Acme Supplies (DEMO)</td>
+                                <td class="sorting_1">Supplier</td>
+                                <td>Acme324@fmail.com</td>
+                                <td>5467983476</td>
+                                <td>5468923446</td>
+                                <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                <td>15/04/2019</td>
+                                <td>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td>Okuneva Huel (DEMO)</td>
+                                <td class="sorting_1">Supplier</td>
+                                <td>mara73@reilly.com</td>
+                                <td>3467863413</td>
+                                <td>4565789234</td>
+                                <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                <td>12/04/2019</td>
+                                <td>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td>Rice Bode (DEMO)</td>
+                                <td class="sorting_1">Supplier</td>
+                                <td>abigale57@adams.org</td>
+                                <td>5467983476</td>
+                                <td>5468923446</td>
+                                <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                <td>11/03/2019</td>
+                                <td>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td>Parisian Gutmann	 (DEMO)</td>
+                                <td class="sorting_1">Supplier</td>
+                                <td>elroy.keebler@conroy.biz</td>
+                                <td>7634598236</td>
+                                <td>9875634278</td>
+                                <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                <td>10/04/2019</td>
+                                <td>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr role="row" class="odd">
+                                <td>Rodriguez and Sons (DEMO)</td>
+                                <td class="sorting_1">Customer</td>
+                                <td>rosalia.mohr@gutkowski.com</td>
+                                <td>5467983476</td>
+                                <td>5468923446</td>
+                                <td><span class="badge badge-pill badge-primary">Active</span></td>
+                                <td>04/02/2019</td>
+                                <td>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <label class="custom-control custom-checkbox mb-0">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-label"></span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="row view-pager">
+                            <div class="col-sm-12">
+                                <div class="text-center">
+                                    <div class="dataTables_info" id="DataTables_Table_2_info" role="status"
+                                         aria-live="polite">Showing 1 to 10 of 41 entries
+                                    </div>
+                                    <div class="dataTables_paginate paging_simple_numbers"
+                                         id="DataTables_Table_2_paginate">
+                                        <ul class="pagination pagination-sm">
+                                            <li class="paginate_button page-item previous disabled"
+                                                id="DataTables_Table_2_previous"><a href="#"
+                                                                                    aria-controls="DataTables_Table_2"
+                                                                                    data-dt-idx="0"
+                                                                                    tabindex="0"
+                                                                                    class="page-link prev"><i
+                                                    class="simple-icon-arrow-left"></i></a></li>
+                                            <li class="paginate_button page-item active"><a href="#"
+                                                                                            aria-controls="DataTables_Table_2"
+                                                                                            data-dt-idx="1"
+                                                                                            tabindex="0"
+                                                                                            class="page-link">1</a>
+                                            </li>
+                                            <li class="paginate_button page-item "><a href="#"
+                                                                                      aria-controls="DataTables_Table_2"
+                                                                                      data-dt-idx="2"
+                                                                                      tabindex="0"
+                                                                                      class="page-link">2</a></li>
+                                            <li class="paginate_button page-item "><a href="#"
+                                                                                      aria-controls="DataTables_Table_2"
+                                                                                      data-dt-idx="3"
+                                                                                      tabindex="0"
+                                                                                      class="page-link">3</a></li>
+                                            <li class="paginate_button page-item "><a href="#"
+                                                                                      aria-controls="DataTables_Table_2"
+                                                                                      data-dt-idx="4"
+                                                                                      tabindex="0"
+                                                                                      class="page-link">4</a></li>
+                                            <li class="paginate_button page-item "><a href="#"
+                                                                                      aria-controls="DataTables_Table_2"
+                                                                                      data-dt-idx="5"
+                                                                                      tabindex="0"
+                                                                                      class="page-link">5</a></li>
+                                            <li class="paginate_button page-item next"
+                                                id="DataTables_Table_2_next"><a href="#"
+                                                                                aria-controls="DataTables_Table_2"
+                                                                                data-dt-idx="6"
+                                                                                tabindex="0" class="page-link next"><i class="fa fa-angle-right custom-icon" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

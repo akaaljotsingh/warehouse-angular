@@ -1,0 +1,377 @@
+<div class="container-fluid disable-text-selection">
+    <div class="row app-row">
+        <div class="col-12">
+            <div class="mb-3">
+                <h1>Create Customer</h1>
+                <div class="float-sm-right text-zero">
+                    <!-- <button type="button" class="btn btn-outline-primary btn-sm default mb-1 mr-2">Edit</button> -->
+                    <button type="button" class="btn btn-outline-primary btn-sm default mb-1">Help</button>
+                </div>
+            </div>
+        </div>
+        <!--=================-->
+        <div class="separator mb-5"></div>
+    </div>
+    <div class="row mb-2 app-row">
+  
+        <div class="col-md-12 mb-2">
+  
+            <div class="card d-flex flex-row mb-3">
+                <div class="pl-2 d-flex flex-grow-1 min-width-zero">
+                    <div class="card-body align-self-center ">
+                        <!-- <p class="list-item-heading text-small mb-1 truncate w-20 w-sm-100">Type : <b>Supplier</b>
+                        </p>
+                        <p class="list-item-heading text-small mb-1 truncate w-20 w-sm-100">Phone :
+                            <b>5467983476</b></p>
+                        <p class="list-item-heading text-small mb-1 truncate w-20 w-sm-100">Email : <b>Acme324@fmail.com</b>
+                        </p>
+                        <p class="list-item-heading text-small mb-1 truncate w-20 w-sm-100">Default Price List : <b>Not
+                            Set</b></p> -->
+                        <div class="row form">
+  
+                            <div class="col-md-3">
+                                <label class="form-label">Company name</label>
+                                <input type="text" class="form-control" placeholder="Customer name">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Company email</label>
+                                <input type="text" class="form-control" placeholder="Company email">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Company address</label>
+                                <input type="text" class="form-control" placeholder="Company address">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">Company phone</label>
+                                <input type="text" class="form-control" placeholder="Company phone">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+        </div>
+    </div>
+    <!--=============================-->
+    <div class="row mb-2 app-row">
+        <div class="col-md-12 col-lg-12 col-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                          <!-- <tabset>
+                            <tab heading="Contacts" id="tab1"> -->
+                                  <div id="DataTables_Table_2_wrapper"
+                                  class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                                  <table class="table table-hover" id="products-table" role="grid"
+                                  aria-describedby="DataTables_Table_2_info">
+                               <thead class="thead-light">
+                               <tr role="row">
+                                   <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1" aria-sort="ascending"
+                                       aria-label="Name: activate to sort column descending"
+                                   > Name 
+                                   <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1" aria-sort="ascending"
+                                       aria-label="Name: activate to sort column descending"
+                                   >Department
+                                   <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1"
+                                       aria-label="Position: activate to sort column ascending"
+                                   >Email
+                                   <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1"
+                                       aria-label="Office: activate to sort column ascending"
+                                   >Phone
+                                   <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1"
+                                       aria-label="Age: activate to sort column ascending"
+                                   >Address
+                                   <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1"
+                                       aria-label="Age: activate to sort column ascending"
+                                   >Notes
+                                   <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1"
+                                       aria-label="Age: activate to sort column ascending"
+                                   >Action
+                                 </tr>
+                               </thead>
+                               <tbody>
+                               <tr role="row" class="odd">
+                                   <td>Acme Supplies (DEMO)</td>
+                                   <td class="sorting_1">Warehouse</td>
+                                   <td>Acme324@fmail.com</td>
+                                   <td>5467983476</td>
+                                   <td>7604 Manhattan Street Carol Stream</td>
+                                   <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis.</td>
+                                   <td>
+                                       <a  href="" data-toggle="modal" data-backdrop="static"
+                                          data-target="#edit-contact">Edit</a>
+                                       <a href="#">Delete</a>
+                                   </td>
+                               </tr>
+                               <tr role="row" class="odd">
+                                   <td>Okuneva Huel (DEMO)</td>
+                                   <td class="sorting_1">Head Office</td>
+                                   <td>mara73@reilly.com</td>
+                                   <td>3467863413</td>
+                                   <td>7604 Manhattan Street Carol Stream</td>
+                                   <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis.</td>
+                                   <td>
+                                       <a  href="" data-toggle="modal" data-backdrop="static"
+                                           data-target="#edit-contact">Edit</a>
+                                       <a href="#">Delete</a>
+                                   </td>
+                               </tr>
+                               <tr role="row" class="odd">
+                                   <td>Rice Bode (DEMO)</td>
+                                   <td class="sorting_1">Warehouse</td>
+                                   <td>abigale57@adams.org</td>
+                                   <td>5467983476</td>
+                                   <td>7604 Manhattan Street Carol Stream</td>
+                                   <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis.</td>
+                                   <td>
+                                       <a  href="" data-toggle="modal" data-backdrop="static"
+                                           data-target="#edit-contact">Edit</a>
+                                       <a href="#">Delete</a>
+                                   </td>
+                               </tr>
+                               <tr role="row" class="odd">
+                                   <td>Parisian Gutmann (DEMO)</td>
+                                   <td class="sorting_1">Laboratory</td>
+                                   <td>elroy.keebler@conroy.biz</td>
+                                   <td>7634598236</td>
+                                   <td>7604 Manhattan Street Carol Stream</td>
+                                   <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis.</td>
+                                   <td>
+                                       <a  href="" data-toggle="modal" data-backdrop="static"
+                                           data-target="#edit-contact">Edit</a>
+                                       <a href="#">Delete</a>
+                                   </td>
+                               </tr>
+                               <tr role="row" class="odd">
+                                   <td>Rodriguez and Sons (DEMO)</td>
+                                   <td class="sorting_1">Warehouse</td>
+                                   <td>rosalia.mohr@gutkowski.com</td>
+                                   <td>5467983476</td>
+                                   <td>7604 Manhattan Street Carol Stream</td>
+                                   <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis.</td>
+                                   <td>
+                                       <a  href="" data-toggle="modal" data-backdrop="static"
+                                           data-target="#edit-contact">Edit</a>
+                                       <a href="#">Delete</a>
+                                   </td>
+                               </tr>
+                               <tr role="row" class="odd">
+                                   <td>Acme Supplies (DEMO)</td>
+                                   <td class="sorting_1">Warehouse</td>
+                                   <td>Acme324@fmail.com</td>
+                                   <td>5467983476</td>
+                                   <td>7604 Manhattan Street Carol Stream</td>
+                                   <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis.</td>
+                                   <td>
+                                       <a  href="" data-toggle="modal" data-backdrop="static"
+                                           data-target="#edit-contact">Edit</a>
+                                       <a href="#">Delete</a>
+                                   </td>
+                               </tr>
+                               <tr role="row" class="odd text-center">
+                                   <td colspan="6">
+                                       <button type="button" data-toggle="modal" data-backdrop="static"
+                                               data-target="#add-contact"
+                                               class="btn btn-outline-primary btn-sm default mb-1 mr-2">Add
+                                           Quick Contact
+                                       </button>
+                                   </td>
+                               </tr>
+                               </tbody>
+                           </table>
+                                  <div class="row view-pager">
+                                      <div class="col-sm-12">
+                                          <div class="text-center">
+                                              <!--<div class="dataTables_info" id="DataTables_Table_2_info" role="status"-->
+                                              <!--aria-live="polite">Showing 1 to 10 of 41 entries-->
+                                              <!--</div>-->
+                                              <!--<div class="dataTables_paginate paging_simple_numbers"-->
+                                              <!--id="DataTables_Table_2_paginate">-->
+                                              <!--<ul class="pagination pagination-sm">-->
+                                              <!--<li class="paginate_button page-item previous disabled"-->
+                                              <!--id="DataTables_Table_2_previous"><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="0"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link prev"><i-->
+                                              <!--class="simple-icon-arrow-left"></i></a></li>-->
+                                              <!--<li class="paginate_button page-item active"><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="1"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link">1</a>-->
+                                              <!--</li>-->
+                                              <!--<li class="paginate_button page-item "><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="2"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link">2</a></li>-->
+                                              <!--<li class="paginate_button page-item "><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="3"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link">3</a></li>-->
+                                              <!--<li class="paginate_button page-item "><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="4"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link">4</a></li>-->
+                                              <!--<li class="paginate_button page-item "><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="5"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link">5</a></li>-->
+                                              <!--<li class="paginate_button page-item next"-->
+                                              <!--id="DataTables_Table_2_next"><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="6"-->
+                                              <!--tabindex="0" class="page-link next"><i-->
+                                              <!--class="simple-icon-arrow-right"></i></a></li>-->
+                                              <!--</ul>-->
+                                              <!--</div>-->
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            <!-- </tab>
+                            <tab heading="Orders" id="tab2"> -->
+                                  <div id="DataTables_Table_2_wrapper"
+                                  class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                                  <table class="table table-hover" id="products-table" role="grid"
+                                  aria-describedby="DataTables_Table_2_info">
+                               <thead class="thead-light">
+                               <tr role="row">
+                                   <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1" aria-sort="ascending"
+                                       aria-label="Name: activate to sort column descending"
+                                   >Purchase Order
+                                   <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1"
+                                       aria-label="Position: activate to sort column ascending"
+                                   >Status
+                                   <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1"
+                                       aria-label="Office: activate to sort column ascending"
+                                   >Received
+                                   <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1"
+                                       aria-label="Age: activate to sort column ascending"
+                                   >Location
+                                   <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1"
+                                       aria-label="Start date: activate to sort column ascending"
+                                   >Created
+                                   <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
+                                       rowspan="1" colspan="1"
+                                       aria-label="Start date: activate to sort column ascending"
+                                   >Total Value
+                               </tr>
+                               </thead>
+                               <tbody>
+                                   <tr role="row" class="odd">
+                                       <td colspan="6" class="text-center">No Records</td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                                  <div class="row view-pager">
+                                      <div class="col-sm-12">
+                                          <div class="text-center">
+                                              <!--<div class="dataTables_info" id="DataTables_Table_2_info" role="status"-->
+                                              <!--aria-live="polite">Showing 1 to 10 of 41 entries-->
+                                              <!--</div>-->
+                                              <!--<div class="dataTables_paginate paging_simple_numbers"-->
+                                              <!--id="DataTables_Table_2_paginate">-->
+                                              <!--<ul class="pagination pagination-sm">-->
+                                              <!--<li class="paginate_button page-item previous disabled"-->
+                                              <!--id="DataTables_Table_2_previous"><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="0"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link prev"><i-->
+                                              <!--class="simple-icon-arrow-left"></i></a></li>-->
+                                              <!--<li class="paginate_button page-item active"><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="1"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link">1</a>-->
+                                              <!--</li>-->
+                                              <!--<li class="paginate_button page-item "><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="2"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link">2</a></li>-->
+                                              <!--<li class="paginate_button page-item "><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="3"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link">3</a></li>-->
+                                              <!--<li class="paginate_button page-item "><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="4"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link">4</a></li>-->
+                                              <!--<li class="paginate_button page-item "><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="5"-->
+                                              <!--tabindex="0"-->
+                                              <!--class="page-link">5</a></li>-->
+                                              <!--<li class="paginate_button page-item next"-->
+                                              <!--id="DataTables_Table_2_next"><a href="#"-->
+                                              <!--aria-controls="DataTables_Table_2"-->
+                                              <!--data-dt-idx="6"-->
+                                              <!--tabindex="0" class="page-link next"><i-->
+                                              <!--class="simple-icon-arrow-right"></i></a></li>-->
+                                              <!--</ul>-->
+                                              <!--</div>-->
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            <!-- </tab>
+                          </tabset> -->
+                        </div>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <div class="app-menu">
+    <div class="p-4">
+        <div class="scroll ps" style="height: 327px;">
+  
+            <!--======-->
+            <div class="btns-wrapper mt-2 mb-5 text-right">
+                <button type="button" class="btn btn-outline-primary btn-sm default mb-1 mr-2">Cancel</button>
+                <button type="button" class="btn btn-secondary btn-sm default mb-1" routerLink="/warehouse" >Create</button>
+            </div>
+            <div>
+                <p><b>INFO</b><br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi ad non totam enim distinctio,
+                    dolorum id officia optio dicta ducimus incidunt soluta sunt esse reiciendis ex, quod amet
+                    illum quae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, repudiandae sed. Dicta cum
+                    accusamus esse ipsum ipsa consectetur similique ad? Minima laboriosam, deserunt rerum fuga
+                    id molestias dicta. Aliquam, enim!</p>
+            </div>
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">
+  
+                </div>
+            </div>
+            <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+            </div>
+        </div>
+    </div>
+    <a class="app-menu-button d-inline-block d-xl-none" href="#">
+        <i class="simple-icon-refresh"></i>
+    </a>
+  </div>

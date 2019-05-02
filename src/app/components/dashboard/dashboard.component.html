@@ -1,0 +1,547 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <mat-tab-group>
+  <mat-tab label="First"> Content 1 </mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+
+            <!-- <tabset>
+                <tab heading="Dashboard" id="tab1"> -->
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <h1 class="font-weight-bold">Dashboard Analytics</h1>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group mb-3 float-right form-inline">
+                                <label class="mr-2">Last 7 days</label>
+                                <div class="input-daterange input-group" id="datepicker">
+                                    <label class="form-group has-float-label">
+                                        <!-- <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker
+                                            [(ngModel)]="bsRangeValue"> -->
+                                        <span>Date Range</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="separator mb-5"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="card mb-4 progress-banner">
+                                <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                                    <div>
+                                        <svg style="width:44px;height:44px" viewBox="0 0 24 24">
+                                            <path fill="#ffffff"
+                                                d="M20,5C19.4,5 19,5.5 19,6.1V16C19,16.6 19.4,17 20,17.1C20.6,17.1 21,16.6 21,16V6.1C21,5.5 20.6,5 20,5M16.4,2H4.6C3.7,2 3,2.7 3,3.6V17.4C3,18.3 3.7,19 4.6,19H6V21C6,21.6 6.4,22 7,22H13C13.6,22 14,21.6 14,21V19H16.4C17.3,19 18,18.3 18,17.4V3.6C18,2.7 17.3,2 16.4,2M5,8H8V10H5V8M12,11V13H9V11H12M9,10V8H12V10H9M12,14V16H9V14H12M5,11H8V13H5V11M5,16V14H8V16H5M8,21H7V19H8V21M13,21H10V19H13V21M16,16H13V14H16V16M16,13H13V11H16V13M16,10H13V8H16V10M16,6H5V4H16V6Z" />
+                                        </svg>
+                                        <div>
+                                            <p class="lead text-white">Current Orders</p>
+                                            <!-- <p class="text-small text-white">Pending for publish</p> -->
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div role="progressbar"
+                                            class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
+                                            data-trail-color="rgba(255,255,255,0.2)" aria-valuemax="2000"
+                                            data-show-percent="false">
+                                            <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0"></path>
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white"
+                                                    stroke-width="4" fill-opacity="0"
+                                                    style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 301.635;">
+                                                </path>
+                                            </svg>
+                                            <div class="progressbar-text"
+                                                style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: white;">
+                                                $2000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card mb-4 progress-banner">
+                                <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                                    <div>
+                                        <svg style="width:44px;height:44px" viewBox="0 0 24 24">
+                                            <path fill="#ffffff"
+                                                d="M5,6H23V18H5V6M14,9A3,3 0 0,1 17,12A3,3 0 0,1 14,15A3,3 0 0,1 11,12A3,3 0 0,1 14,9M9,8A2,2 0 0,1 7,10V14A2,2 0 0,1 9,16H19A2,2 0 0,1 21,14V10A2,2 0 0,1 19,8H9M1,10H3V20H19V22H1V10Z" />
+                                        </svg>
+                                        <div>
+                                            <p class="lead text-white">Space Avaliable</p>
+                                            <!-- <p class="text-small text-white">Pending for publish</p> -->
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div role="progressbar"
+                                            class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
+                                            data-trail-color="rgba(255,255,255,0.2)" aria-valuemax="2000"
+                                            data-show-percent="false">
+                                            <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0"></path>
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white"
+                                                    stroke-width="4" fill-opacity="0"
+                                                    style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 301.635;">
+                                                </path>
+                                            </svg>
+                                            <div class="progressbar-text"
+                                                style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: white;">
+                                                $2000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card mb-4 progress-banner">
+                                <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                                    <div>
+                                        <svg style="width:44px;height:44px" viewBox="0 0 24 24">
+                                            <path fill="#ffffff"
+                                                d="M20,18H4V6H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4M11,17H13V16H14A1,1 0 0,0 15,15V12A1,1 0 0,0 14,11H11V10H15V8H13V7H11V8H10A1,1 0 0,0 9,9V12A1,1 0 0,0 10,13H13V14H9V16H11V17Z" />
+                                        </svg>
+                                        <div>
+                                            <p class="lead text-white">Total Earnings</p>
+                                            <!-- <p class="text-small text-white">Pending for publish</p> -->
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div role="progressbar"
+                                            class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
+                                            data-trail-color="rgba(255,255,255,0.2)" aria-valuemax="2000"
+                                            data-show-percent="false">
+                                            <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0"></path>
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white"
+                                                    stroke-width="4" fill-opacity="0"
+                                                    style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 301.635;">
+                                                </path>
+                                            </svg>
+                                            <div class="progressbar-text"
+                                                style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: white;">
+                                                $2000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card mb-4 progress-banner">
+                                <div class="card-body justify-content-between d-flex flex-row align-items-center">
+                                    <div>
+                                        <svg style="width:44px;height:44px" viewBox="0 0 24 24">
+                                            <path fill="#ffffff"
+                                                d="M12,0L8,4H10V8H14V4H16M1,2V4H3L6.6,11.59L5.25,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42C7.29,15 7.17,14.89 7.17,14.75L7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.59 17.3,11.97L21.16,4.96L19.42,4H19.41L18.31,6L15.55,11H8.53L8.4,10.73L6.16,6L5.21,4L4.27,2M7,18A2,2 0 0,0 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20A2,2 0 0,0 7,18M17,18A2,2 0 0,0 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20A2,2 0 0,0 17,18Z" />
+                                        </svg>
+                                        <div>
+                                            <p class="lead text-white">Pending Orders</p>
+                                            <!-- <p class="text-small text-white">Pending for publish</p> -->
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div role="progressbar"
+                                            class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
+                                            data-trail-color="rgba(255,255,255,0.2)" aria-valuemax="2000"
+                                            data-show-percent="false">
+                                            <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0"></path>
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white"
+                                                    stroke-width="4" fill-opacity="0"
+                                                    style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 301.635;">
+                                                </path>
+                                            </svg>
+                                            <div class="progressbar-text"
+                                                style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: white;">
+                                                $2000</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 mb-4">
+                            <div class="card dashboard-filled-line-chart">
+                                <div class="card-body" style="flex: none; padding-bottom: 10px;">
+                                    <div class="float-left float-none-xs">
+                                        <div class="d-inline-block">
+                                            <h5 class="d-inline "><b>Inward Orders </b></h5>
+                                            <!-- <span class="text-muted text-small d-block">Unique Visitors</span> -->
+                                        </div>
+                                    </div>
+                                    <div class=" float-right float-none-xs mb-2 mt--7">
+                                        <!-- <ng-select [allowClear]="true" [items]="items" [disabled]="disabled"
+                                            (data)="refreshValue($event)" (selected)="selected($event)"
+                                            (removed)="removed($event)" placeholder="Select Customer">
+                                        </ng-select> -->
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex-item">
+                                            <div style="display: block;">
+                                                <!-- <canvas baseChart height="160" [datasets]="lineChartData"
+                                                    [labels]="lineChartLabels" [options]="lineChartOptions"
+                                                    [colors]="lineChartColors" [legend]="lineChartLegend"
+                                                    [chartType]="lineChartType" [plugins]="lineChartPlugins"
+                                                    (chartHover)="chartHovered($event)"
+                                                    (chartClick)="chartClicked($event)"></canvas> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+        
+                        <div class="col-md-6 col-sm-12 mb-4">
+                            <div class="card dashboard-filled-line-chart">
+                                <div class="card-body" style="flex: none; padding-bottom: 10px;">
+                                    <div class="float-left float-none-xs">
+                                        <div class="d-inline-block">
+                                            <h5 class="d-inline "><b>Outward Orders </b></h5>
+                                            <!-- <span class="text-muted text-small d-block">Unique Visitors</span> -->
+                                        </div>
+                                    </div>
+                                    <div class=" float-right float-none-xs mb-2 mt--7">
+                                        <!-- <ng-select [allowClear]="true" [items]="items" [disabled]="disabled"
+                                            (data)="refreshValue($event)" (selected)="selected($event)"
+                                            (removed)="removed($event)" placeholder="Select Customer">
+                                        </ng-select> -->
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex-item">
+                                            <div style="display: block;">
+                                                <!-- <canvas baseChart height="160" [datasets]="lineChartData"
+                                                    [labels]="lineChartLabels" [options]="lineChartOptions"
+                                                    [colors]="lineChartColors" [legend]="lineChartLegend"
+                                                    [chartType]="lineChartType" [plugins]="lineChartPlugins"
+                                                    (chartHover)="chartHovered($event)"
+                                                    (chartClick)="chartClicked($event)"></canvas> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <div class="row mb-4">
+        
+        
+                        <!--<div class="col-4 mb-4">-->
+                        <!--<div class="card">-->
+                        <!--<div class="card-body">-->
+                        <!--<h5 class="card-title">Categories</h5>-->
+                        <!--<div class="chart-container">-->
+                        <!--<canvas id="polarChart"></canvas>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+        
+        
+                        <div class="col-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title font-weight-bold">Incoming Orders</h5>
+        
+                                    <ul class="list-custom">
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0001</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 8 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0002</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 4 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0003</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 8 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0004</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 18 days</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">View All</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title font-weight-bold">Overdue Invoices</h5>
+        
+                                    <ul class="list-custom">
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0456</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 2 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0879</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 3 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0098</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 9 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0347</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 12 days</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">View All</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title font-weight-bold">Overdue Shipments</h5>
+        
+                                    <ul class="list-custom">
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0236</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 8 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0458</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 8 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0056</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 8 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0043</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 8 days</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">View All</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title font-weight-bold">Orders To Ship</h5>
+        
+                                    <ul class="list-custom">
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0012</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 8 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0001</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 8 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0043</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 8 days</p>
+                                            </div>
+                                        </li>
+                                        <li class=" clearfix mb-3 mt-3">
+                                            <div class="float-left">
+                                                <p class="light-text font-weight-bold"> #SO0065</p>
+                                                <p>TradeGecko (DEMO)</p>
+                                            </div>
+                                            <div class="float-right">
+                                                <p>₹6,900.00</p>
+                                                <p>Overdue by 8 days</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">View All</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title font-weight-bold">Guided Tours</h5>
+        
+                                    <div class="ps">
+        
+                                        <table class="table table-sm table-borderless m-0">
+        
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span class="log-indicator border-theme-1 align-middle"></span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">
+                                                            <span class="font-weight-medium"> Create a Product</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="log-indicator border-theme-2 align-middle"></span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">
+                                                            <span class="font-weight-medium"> Create a Customer or
+                                                                Supplier</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="log-indicator border-danger align-middle"></span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">
+                                                            <span class="font-weight-medium"> Create a Sales Order</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="log-indicator border-theme-2 align-middle"></span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">
+                                                            <span class="font-weight-medium"> Create a Purchase Order</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="log-indicator border-theme-2 align-middle"></span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#">
+                                                            <span class="font-weight-medium"> Managing your B2B eCommerce</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </tab> -->
+                <!-- <tab heading="Activity Feed" id="tab2"> -->
+                    <p class="mt-3">
+                        Activity goes here ...
+                    </p>
+                <!-- </tab>
+            </tabset> -->
+
+        </div>
+    </div>
+
+
+</div>
