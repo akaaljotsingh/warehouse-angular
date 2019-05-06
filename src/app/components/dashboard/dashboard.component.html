@@ -2,28 +2,26 @@
     <div class="row">
         <div class="col-12">
 
-            <mat-tab-group>
-  <mat-tab label="First"> Content 1 </mat-tab>
-  <mat-tab label="Second"> Content 2 </mat-tab>
-  <mat-tab label="Third"> Content 3 </mat-tab>
-</mat-tab-group>
 
-            <!-- <tabset>
-                <tab heading="Dashboard" id="tab1"> -->
+            <mat-tab-group>
+                <mat-tab label="Dashboard">
                     <div class="row mt-4">
                         <div class="col-6">
                             <h1 class="font-weight-bold">Dashboard Analytics</h1>
                         </div>
                         <div class="col-6">
                             <div class="form-group mb-3 float-right form-inline">
-                                <label class="mr-2">Last 7 days</label>
-                                <div class="input-daterange input-group" id="datepicker">
-                                    <label class="form-group has-float-label">
-                                        <!-- <input class="form-control" #drp="bsDaterangepicker" bsDaterangepicker
-                                            [(ngModel)]="bsRangeValue"> -->
-                                        <span>Date Range</span>
-                                    </label>
-                                </div>
+                                <mat-form-field>
+                                    <input matInput [matDatepicker]="picker" placeholder="From date">
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                                <mat-form-field class="ml-4">
+                                    <input matInput [matDatepicker]="picker1" placeholder="To date">
+                                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker1></mat-datepicker>
+                                </mat-form-field>
+
                             </div>
                         </div>
                         <div class="separator mb-5"></div>
@@ -44,14 +42,15 @@
                                     </div>
                                     <div>
                                         <div role="progressbar"
-                                            class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
-                                            data-trail-color="rgba(255,255,255,0.2)" aria-valuemax="2000"
-                                            data-show-percent="false">
+                                            class="progress-bar-circle progress-bar-banner position-relative"
+                                            data-color="white" data-trail-color="rgba(255,255,255,0.2)"
+                                            aria-valuemax="2000" data-show-percent="false">
                                             <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
                                                 <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
-                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0"></path>
-                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white"
-                                                    stroke-width="4" fill-opacity="0"
+                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0">
+                                                </path>
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                                                    stroke="white" stroke-width="4" fill-opacity="0"
                                                     style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 301.635;">
                                                 </path>
                                             </svg>
@@ -78,14 +77,15 @@
                                     </div>
                                     <div>
                                         <div role="progressbar"
-                                            class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
-                                            data-trail-color="rgba(255,255,255,0.2)" aria-valuemax="2000"
-                                            data-show-percent="false">
+                                            class="progress-bar-circle progress-bar-banner position-relative"
+                                            data-color="white" data-trail-color="rgba(255,255,255,0.2)"
+                                            aria-valuemax="2000" data-show-percent="false">
                                             <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
                                                 <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
-                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0"></path>
-                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white"
-                                                    stroke-width="4" fill-opacity="0"
+                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0">
+                                                </path>
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                                                    stroke="white" stroke-width="4" fill-opacity="0"
                                                     style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 301.635;">
                                                 </path>
                                             </svg>
@@ -112,14 +112,15 @@
                                     </div>
                                     <div>
                                         <div role="progressbar"
-                                            class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
-                                            data-trail-color="rgba(255,255,255,0.2)" aria-valuemax="2000"
-                                            data-show-percent="false">
+                                            class="progress-bar-circle progress-bar-banner position-relative"
+                                            data-color="white" data-trail-color="rgba(255,255,255,0.2)"
+                                            aria-valuemax="2000" data-show-percent="false">
                                             <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
                                                 <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
-                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0"></path>
-                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white"
-                                                    stroke-width="4" fill-opacity="0"
+                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0">
+                                                </path>
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                                                    stroke="white" stroke-width="4" fill-opacity="0"
                                                     style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 301.635;">
                                                 </path>
                                             </svg>
@@ -146,14 +147,15 @@
                                     </div>
                                     <div>
                                         <div role="progressbar"
-                                            class="progress-bar-circle progress-bar-banner position-relative" data-color="white"
-                                            data-trail-color="rgba(255,255,255,0.2)" aria-valuemax="2000"
-                                            data-show-percent="false">
+                                            class="progress-bar-circle progress-bar-banner position-relative"
+                                            data-color="white" data-trail-color="rgba(255,255,255,0.2)"
+                                            aria-valuemax="2000" data-show-percent="false">
                                             <svg viewBox="0 0 100 100" style="display: block; width: 100%;">
                                                 <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
-                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0"></path>
-                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="white"
-                                                    stroke-width="4" fill-opacity="0"
+                                                    stroke="rgba(255,255,255,0.2)" stroke-width="4" fill-opacity="0">
+                                                </path>
+                                                <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96"
+                                                    stroke="white" stroke-width="4" fill-opacity="0"
                                                     style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: 301.635;">
                                                 </path>
                                             </svg>
@@ -177,10 +179,14 @@
                                         </div>
                                     </div>
                                     <div class=" float-right float-none-xs mb-2 mt--7">
-                                        <!-- <ng-select [allowClear]="true" [items]="items" [disabled]="disabled"
-                                            (data)="refreshValue($event)" (selected)="selected($event)"
-                                            (removed)="removed($event)" placeholder="Select Customer">
-                                        </ng-select> -->
+                                        <mat-form-field>
+                                            <mat-label>Select Customer</mat-label>
+                                            <mat-select>
+                                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                                    {{food.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
                                     </div>
                                     <div class="flex">
                                         <div class="flex-item">
@@ -195,10 +201,10 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                             </div>
                         </div>
-        
+
                         <div class="col-md-6 col-sm-12 mb-4">
                             <div class="card dashboard-filled-line-chart">
                                 <div class="card-body" style="flex: none; padding-bottom: 10px;">
@@ -209,10 +215,14 @@
                                         </div>
                                     </div>
                                     <div class=" float-right float-none-xs mb-2 mt--7">
-                                        <!-- <ng-select [allowClear]="true" [items]="items" [disabled]="disabled"
-                                            (data)="refreshValue($event)" (selected)="selected($event)"
-                                            (removed)="removed($event)" placeholder="Select Customer">
-                                        </ng-select> -->
+                                        <mat-form-field>
+                                            <mat-label>Select Customer</mat-label>
+                                            <mat-select>
+                                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                                    {{food.viewValue}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
                                     </div>
                                     <div class="flex">
                                         <div class="flex-item">
@@ -227,15 +237,15 @@
                                         </div>
                                     </div>
                                 </div>
-        
+
                             </div>
                         </div>
-        
+
                     </div>
-        
+
                     <div class="row mb-4">
-        
-        
+
+
                         <!--<div class="col-4 mb-4">-->
                         <!--<div class="card">-->
                         <!--<div class="card-body">-->
@@ -246,13 +256,13 @@
                         <!--</div>-->
                         <!--</div>-->
                         <!--</div>-->
-        
-        
+
+
                         <div class="col-4 mb-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bold">Incoming Orders</h5>
-        
+
                                     <ul class="list-custom">
                                         <li class=" clearfix mb-3 mt-3">
                                             <div class="float-left">
@@ -301,12 +311,12 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="col-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bold">Overdue Invoices</h5>
-        
+
                                     <ul class="list-custom">
                                         <li class=" clearfix mb-3 mt-3">
                                             <div class="float-left">
@@ -355,12 +365,12 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="col-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bold">Overdue Shipments</h5>
-        
+
                                     <ul class="list-custom">
                                         <li class=" clearfix mb-3 mt-3">
                                             <div class="float-left">
@@ -409,12 +419,12 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="col-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bold">Orders To Ship</h5>
-        
+
                                     <ul class="list-custom">
                                         <li class=" clearfix mb-3 mt-3">
                                             <div class="float-left">
@@ -463,16 +473,16 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="col-4">
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title font-weight-bold">Guided Tours</h5>
-        
+
                                     <div class="ps">
-        
+
                                         <table class="table table-sm table-borderless m-0">
-        
+
                                             <tbody>
                                                 <tr>
                                                     <td>
@@ -501,7 +511,8 @@
                                                     </td>
                                                     <td>
                                                         <a href="#">
-                                                            <span class="font-weight-medium"> Create a Sales Order</span>
+                                                            <span class="font-weight-medium"> Create a Sales
+                                                                Order</span>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -511,7 +522,8 @@
                                                     </td>
                                                     <td>
                                                         <a href="#">
-                                                            <span class="font-weight-medium"> Create a Purchase Order</span>
+                                                            <span class="font-weight-medium"> Create a Purchase
+                                                                Order</span>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -521,7 +533,8 @@
                                                     </td>
                                                     <td>
                                                         <a href="#">
-                                                            <span class="font-weight-medium"> Managing your B2B eCommerce</span>
+                                                            <span class="font-weight-medium"> Managing your B2B
+                                                                eCommerce</span>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -532,13 +545,13 @@
                             </div>
                         </div>
                     </div>
-                <!-- </tab> -->
-                <!-- <tab heading="Activity Feed" id="tab2"> -->
+                </mat-tab>
+                <mat-tab label="Activities">
                     <p class="mt-3">
                         Activity goes here ...
                     </p>
-                <!-- </tab>
-            </tabset> -->
+                </mat-tab>
+            </mat-tab-group>
 
         </div>
     </div>

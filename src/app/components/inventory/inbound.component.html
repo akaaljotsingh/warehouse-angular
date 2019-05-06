@@ -36,8 +36,8 @@
                         </p>
                     </div>
                     <div class="col-2">
-                        <a href="add-warehouse.html" class="btn btn-light default mt-3"
-                            routerLink="/create-warehouse">Add New Order</a>
+                        <a href="#" class="btn btn-light default mt-3"
+                            routerLink="/create-inbound">Add New Order</a>
                     </div>
                 </div>
             </div>
@@ -56,644 +56,360 @@
                             <i class="simple-icon-arrow-down align-middle"></i>
                         </a>
                         <div class="collapse d-md-block" id="displayOptions">
-                            <span class="mr-3 mb-2 d-inline-block float-md-left">
-                                <a href="#" class="mr-2 view-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19">
-                                        <path class="view-icon-svg" d="M17.5,3H.5a.5.5,0,0,1,0-1h17a.5.5,0,0,1,0,1Z">
-                                        </path>
-                                        <path class="view-icon-svg" d="M17.5,10H.5a.5.5,0,0,1,0-1h17a.5.5,0,0,1,0,1Z">
-                                        </path>
-                                        <path class="view-icon-svg" d="M17.5,17H.5a.5.5,0,0,1,0-1h17a.5.5,0,0,1,0,1Z">
-                                        </path>
-                                    </svg>
-                                </a>
-                                <a href="#" class="mr-2 view-icon active">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19">
-                                        <path class="view-icon-svg" d="M17.5,3H6.5a.5.5,0,0,1,0-1h11a.5.5,0,0,1,0,1Z">
-                                        </path>
-                                        <path class="view-icon-svg"
-                                            d="M3,2V3H1V2H3m.12-1H.88A.87.87,0,0,0,0,1.88V3.12A.87.87,0,0,0,.88,4H3.12A.87.87,0,0,0,4,3.12V1.88A.87.87,0,0,0,3.12,1Z">
-                                        </path>
-                                        <path class="view-icon-svg"
-                                            d="M3,9v1H1V9H3m.12-1H.88A.87.87,0,0,0,0,8.88v1.24A.87.87,0,0,0,.88,11H3.12A.87.87,0,0,0,4,10.12V8.88A.87.87,0,0,0,3.12,8Z">
-                                        </path>
-                                        <path class="view-icon-svg"
-                                            d="M3,16v1H1V16H3m.12-1H.88a.87.87,0,0,0-.88.88v1.24A.87.87,0,0,0,.88,18H3.12A.87.87,0,0,0,4,17.12V15.88A.87.87,0,0,0,3.12,15Z">
-                                        </path>
-                                        <path class="view-icon-svg" d="M17.5,10H6.5a.5.5,0,0,1,0-1h11a.5.5,0,0,1,0,1Z">
-                                        </path>
-                                        <path class="view-icon-svg" d="M17.5,17H6.5a.5.5,0,0,1,0-1h11a.5.5,0,0,1,0,1Z">
-                                        </path>
-                                    </svg>
-                                </a>
-                                <a href="#" class="mr-2 view-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19">
-                                        <path class="view-icon-svg"
-                                            d="M7,2V8H1V2H7m.12-1H.88A.87.87,0,0,0,0,1.88V8.12A.87.87,0,0,0,.88,9H7.12A.87.87,0,0,0,8,8.12V1.88A.87.87,0,0,0,7.12,1Z">
-                                        </path>
-                                        <path class="view-icon-svg"
-                                            d="M17,2V8H11V2h6m.12-1H10.88a.87.87,0,0,0-.88.88V8.12a.87.87,0,0,0,.88.88h6.24A.87.87,0,0,0,18,8.12V1.88A.87.87,0,0,0,17.12,1Z">
-                                        </path>
-                                        <path class="view-icon-svg"
-                                            d="M7,12v6H1V12H7m.12-1H.88a.87.87,0,0,0-.88.88v6.24A.87.87,0,0,0,.88,19H7.12A.87.87,0,0,0,8,18.12V11.88A.87.87,0,0,0,7.12,11Z">
-                                        </path>
-                                        <path class="view-icon-svg"
-                                            d="M17,12v6H11V12h6m.12-1H10.88a.87.87,0,0,0-.88.88v6.24a.87.87,0,0,0,.88.88h6.24a.87.87,0,0,0,.88-.88V11.88a.87.87,0,0,0-.88-.88Z">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </span>
                             <div class="d-block d-md-inline-block">
 
-                                <div class="dropdown d-inline-block mr-2" dropdown>
-                                    <button id="button-basic" dropdownToggle type="button"
-                                        class="btn btn-outline-dark btn-xs dropdown-toggle"
-                                        aria-controls="dropdown-basic">
-                                        Order By<span class="caret"></span>
-                                    </button>
-                                    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu"
-                                        aria-labelledby="button-basic">
-                                        <li role="menuitem"><a class="dropdown-item" href="#">Date </a></li>
-                                        <li role="menuitem"><a class="dropdown-item" href="#">Name</a></li>
-                                        <li role="menuitem"><a class="dropdown-item" href="#">Type</a></li>
-                                    </ul>
-                                </div>
-
-
-
-
-                                <div class="search-sm d-inline-block float-md-left mr-1 mb-1 align-top">
-                                    <input placeholder="Search...">
-                                </div>
                             </div>
                             <div class="float-md-right">
-                                <span class="text-muted text-small">Displaying 1-10 of 210 items </span>
-                                <div class="dropdown d-inline-block mr-2" dropdown>
-                                    <button id="button-basic" dropdownToggle type="button"
-                                        class="btn btn-outline-dark btn-xs dropdown-toggle"
-                                        aria-controls="dropdown-basic">
-                                        20<span class="caret"></span>
-                                    </button>
-                                    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu dropdown-menu-right"
-                                        role="menu" aria-labelledby="button-basic">
-                                        <li role="menuitem"><a class="dropdown-item" href="#">20 </a></li>
-                                        <li role="menuitem"><a class="dropdown-item" href="#">40</a></li>
-                                        <li role="menuitem"><a class="dropdown-item" href="#">80</a></li>
-                                    </ul>
-                                </div>
-                                <!--<div class="btn-group">-->
-                                <!--<div class="btn btn-primary pl-2 pr-0 check-button">-->
-                                <!--<label class="custom-control custom-checkbox mb-0 d-inline-block">-->
-                                <!--<input type="checkbox" class="custom-control-input" id="checkAll">-->
-                                <!--<span class="custom-control-label"></span>-->
-                                <!--</label>-->
-                                <!--</div>-->
-                                <!--<button type="button"-->
-                                <!--class="btn btn-primary dropdown-toggle dropdown-toggle-split pl-2 pr-2"-->
-                                <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                                <!--<span class="sr-only">Toggle Dropdown</span>-->
-                                <!--</button>-->
-                                <!--<div class="dropdown-menu dropdown-menu-right">-->
-                                <!--<a class="dropdown-item" href="#">Action</a>-->
-                                <!--<a class="dropdown-item" href="#">Another action</a>-->
-                                <!--</div>-->
-                                <!--</div>-->
+                                <form class="example-form mt--13">
+                                    <mat-form-field class="example-full-width mr-3">
+                                        <input matInput placeholder="Search...">
+                                    </mat-form-field>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <!-- <tabset>
-                        <tab heading="Active" id="tab1"> -->
-                            <div id="DataTables_Table_2_wrapper"
-                                class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                <table class="table table-hover" id="products-table" role="grid"
-                                    aria-describedby="DataTables_Table_2_info">
-                                    <thead class="thead-light">
-                                        <tr role="row">
-                                            <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1" aria-sort="ascending"
-                                                aria-label="Name: activate to sort column descending">Order#
-                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Position: activate to sort column ascending">Company Name
-                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Office: activate to sort column ascending">Status
-                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Age: activate to sort column ascending">Invoiced
-                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Start date: activate to sort column ascending">Packed
-                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Start date: activate to sort column ascending">Fulfilled
-                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Start date: activate to sort column ascending">Paid
-                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Start date: activate to sort column ascending">Returning
-                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Start date: activate to sort column ascending">Total
-                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Start date: activate to sort column ascending">Created
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr role="row" class="odd">
-                                            <td>43567</td>
-                                            <td>Acme Supplies (DEMO)</td>
-                                            <td><span class="badge badge-pill badge-primary">Active</span></td>
-                                            <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center">
-                                                <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center">
-                                                <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td>$76890</td>
-                                            <td>03/14/2019</td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td>43567</td>
-                                            <td>Acme Supplies (DEMO)</td>
-                                            <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                            <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center">
-                                                <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center">
-                                                <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td>$4560</td>
-                                            <td>03/11/2019</td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td>43567</td>
-                                            <td>Acme Supplies (DEMO)</td>
-                                            <td><span class="badge badge-pill badge-primary">Active</span></td>
-                                            <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center">
-                                                <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center">
-                                                <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td>$32467</td>
-                                            <td>03/18/2019</td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td>43567</td>
-                                            <td>Acme Supplies (DEMO)</td>
-                                            <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                            <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center">
-                                                <i class="fa fa-circle" aria-hidden="true"></i>
-                                            </td>
-                                            <td class="text-center">
-                                                <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                            </td>
-                                            <td>$6578</td>
-                                            <td>03/13/2019</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="row view-pager">
-                                    <div class="col-sm-12">
-                                        <div class="text-center">
-                                            <div class="dataTables_info" id="DataTables_Table_2_info" role="status"
-                                                aria-live="polite">Showing 1 to 10 of 41 entries
-                                            </div>
-                                            <div class="dataTables_paginate paging_simple_numbers"
-                                                id="DataTables_Table_2_paginate">
-                                                <ul class="pagination pagination-sm">
-                                                    <li class="paginate_button page-item previous disabled"
-                                                        id="DataTables_Table_2_previous"><a href="#"
-                                                            aria-controls="DataTables_Table_2" data-dt-idx="0"
-                                                            tabindex="0" class="page-link prev"><i
-                                                                class="simple-icon-arrow-left"></i></a></li>
-                                                    <li class="paginate_button page-item active"><a href="#"
-                                                            aria-controls="DataTables_Table_2" data-dt-idx="1"
-                                                            tabindex="0" class="page-link">1</a>
-                                                    </li>
-                                                    <li class="paginate_button page-item "><a href="#"
-                                                            aria-controls="DataTables_Table_2" data-dt-idx="2"
-                                                            tabindex="0" class="page-link">2</a></li>
-                                                    <li class="paginate_button page-item "><a href="#"
-                                                            aria-controls="DataTables_Table_2" data-dt-idx="3"
-                                                            tabindex="0" class="page-link">3</a></li>
-                                                    <li class="paginate_button page-item "><a href="#"
-                                                            aria-controls="DataTables_Table_2" data-dt-idx="4"
-                                                            tabindex="0" class="page-link">4</a></li>
-                                                    <li class="paginate_button page-item "><a href="#"
-                                                            aria-controls="DataTables_Table_2" data-dt-idx="5"
-                                                            tabindex="0" class="page-link">5</a></li>
-                                                    <li class="paginate_button page-item next"
-                                                        id="DataTables_Table_2_next"><a href="#"
-                                                            aria-controls="DataTables_Table_2" data-dt-idx="6"
-                                                            tabindex="0" class="page-link next"><i
-                                                                class="fa fa-angle-right custom-icon"
-                                                                aria-hidden="true"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <mat-tab-group>
+                        <mat-tab label="Active">
+                            <table mat-table [dataSource]="dataSource" matSort class="">
+                                <ng-container matColumnDef="order">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Orders </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.order}} </td>
+                                </ng-container>
 
+                                <ng-container matColumnDef="company">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Company </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+                                </ng-container>
 
+                                <ng-container matColumnDef="status">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                                </ng-container>
 
+                                <ng-container matColumnDef="invoiced">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Invoiced </th>
+                                    <td mat-cell *matCellDef="let element">
+                                        <span class="dot {{element.invoiced}}"></span>
+                                    </td>
+                                </ng-container>
 
+                                <ng-container matColumnDef="packed">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Packed </th>
+                                    <td mat-cell *matCellDef="let element">
+                                        <span class="dot {{element.packed}}"></span>
+                                    </td>
+                                </ng-container>
 
+                                <ng-container matColumnDef="fulfilled">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Fulfilled </th>
+                                    <td mat-cell *matCellDef="let element">
+                                        <span class="dot {{element.fulfilled}}"></span>
+                                    </td>
+                                </ng-container>
 
+                                <ng-container matColumnDef="paid">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Paid </th>
+                                    <td mat-cell *matCellDef="let element">
+                                        <span class="dot {{element.paid}}"></span>
+                                    </td>
+                                </ng-container>
 
+                                <ng-container matColumnDef="returning">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Returning </th>
+                                    <td mat-cell *matCellDef="let element">
+                                        <span class="dot {{element.returning}}"></span>
+                                    </td>
+                                </ng-container>
 
-                            </div>
-                        <!-- </tab>
-                        <tab heading="To Invoice" id="tab2"> -->
-                            <table class="table table-hover" id="products-table" role="grid"
-                                aria-describedby="DataTables_Table_2_info">
-                                <thead class="thead-light">
-                                    <tr role="row">
-                                        <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2"
-                                            rowspan="1" colspan="1" aria-sort="ascending"
-                                            aria-label="Name: activate to sort column descending" >Order#
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Position: activate to sort column ascending" >Company Name
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Office: activate to sort column ascending" >Status
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Age: activate to sort column ascending" >Invoiced
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Packed
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Fulfilled
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Paid
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Returning
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Total
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Created
-                 </tr>
-                 </thead>
-                 <tbody>
-                 <tr role=" row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-primary">Active</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$76890</td>
-                                        <td>03/14/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$4560</td>
-                                        <td>03/11/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-primary">Active</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$32467</td>
-                                        <td>03/18/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$6578</td>
-                                        <td>03/13/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-primary">Active</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$76890</td>
-                                        <td>03/14/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$4560</td>
-                                        <td>03/11/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-primary">Active</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$32467</td>
-                                        <td>03/18/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$6578</td>
-                                        <td>03/13/2019</td>
-                                    </tr>
-                                    </tbody>
+                                <ng-container matColumnDef="total">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Total </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="created">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Created </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.created}} </td>
+                                </ng-container>
+
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                             </table>
-                        <!-- </tab>
-                        <tab heading="To Ship" id="tab3"> -->
-                            <table class="table table-hover" id="products-table" role="grid"
-                                aria-describedby="DataTables_Table_2_info">
-                                <thead class="thead-light">
-                                    <tr role="row">
-                                        <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2"
-                                            rowspan="1" colspan="1" aria-sort="ascending"
-                                            aria-label="Name: activate to sort column descending" >Order#
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Position: activate to sort column ascending" >Company Name
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Office: activate to sort column ascending" >Status
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Age: activate to sort column ascending" >Invoiced
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Packed
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Fulfilled
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Paid
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Returning
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Total
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Created
-                 </tr>
-                 </thead>
-                 <tbody>
-                 <tr role=" row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$4560</td>
-                                        <td>03/11/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$6578</td>
-                                        <td>03/13/2019</td>
-                                    </tr>
-                                    </tbody>
-                            </table>
-                        <!-- </tab>
-                        <tab heading="To Backorder" id="tab4"> -->
-                            <table class="table table-hover" id="products-table" role="grid"
-                                aria-describedby="DataTables_Table_2_info">
-                                <thead class="thead-light">
-                                    <tr role="row">
-                                        <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2"
-                                            rowspan="1" colspan="1" aria-sort="ascending"
-                                            aria-label="Name: activate to sort column descending" >Order#
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Position: activate to sort column ascending" >Company Name
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Office: activate to sort column ascending" >Status
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Age: activate to sort column ascending" >Invoiced
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Packed
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Fulfilled
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Paid
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Returning
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Total
-                     <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                            aria-label="Start date: activate to sort column ascending" >Created
-                 </tr>
-                 </thead>
-                 <tbody>
-                 <tr role=" row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$4560</td>
-                                        <td>03/11/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$6578</td>
-                                        <td>03/13/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$4560</td>
-                                        <td>03/11/2019</td>
-                                    </tr>
-                                    <tr role="row" class="odd">
-                                        <td>43567</td>
-                                        <td>Acme Supplies (DEMO)</td>
-                                        <td><span class="badge badge-pill badge-success mb-1">Finalized</span></td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center"><i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                        </td>
-                                        <td class="text-center">
-                                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                                        </td>
-                                        <td>$6578</td>
-                                        <td>03/13/2019</td>
-                                    </tr>
-                                    </tbody>
-                            </table>
-                       <!-- </tab>
-                       </tabset> -->
+                            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                            </mat-paginator>
+                        </mat-tab>
+                        <mat-tab label="All">
+                                <table mat-table [dataSource]="dataSource" matSort class="">
+                                        <ng-container matColumnDef="order">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Orders </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.order}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="company">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Company </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="status">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="invoiced">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Invoiced </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.invoiced}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="packed">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Packed </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.packed}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="fulfilled">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Fulfilled </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.fulfilled}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="paid">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Paid </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.paid}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="returning">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Returning </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.returning}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="total">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Total </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="created">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Created </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.created}} </td>
+                                        </ng-container>
+        
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                            </mat-paginator>
+                        </mat-tab>
+                        <mat-tab label="To Invoice">
+                                <table mat-table [dataSource]="dataSource" matSort class="">
+                                        <ng-container matColumnDef="order">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Orders </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.order}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="company">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Company </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="status">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="invoiced">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Invoiced </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.invoiced}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="packed">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Packed </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.packed}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="fulfilled">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Fulfilled </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.fulfilled}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="paid">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Paid </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.paid}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="returning">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Returning </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.returning}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="total">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Total </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="created">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Created </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.created}} </td>
+                                        </ng-container>
+        
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                            </mat-paginator>
+                        </mat-tab>
+                        <mat-tab label="To Ship">
+                                <table mat-table [dataSource]="dataSource" matSort class="">
+                                        <ng-container matColumnDef="order">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Orders </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.order}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="company">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Company </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="status">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="invoiced">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Invoiced </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.invoiced}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="packed">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Packed </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.packed}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="fulfilled">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Fulfilled </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.fulfilled}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="paid">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Paid </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.paid}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="returning">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Returning </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.returning}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="total">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Total </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="created">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Created </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.created}} </td>
+                                        </ng-container>
+        
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                            </mat-paginator>
+                        </mat-tab>
+                        <mat-tab label="To Backorder">
+                                <table mat-table [dataSource]="dataSource" matSort class="">
+                                        <ng-container matColumnDef="order">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Orders </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.order}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="company">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Company </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.company}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="status">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="invoiced">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Invoiced </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.invoiced}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="packed">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Packed </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.packed}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="fulfilled">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Fulfilled </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.fulfilled}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="paid">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Paid </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.paid}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="returning">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Returning </th>
+                                            <td mat-cell *matCellDef="let element">
+                                                <span class="dot {{element.returning}}"></span>
+                                            </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="total">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Total </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+                                        </ng-container>
+        
+                                        <ng-container matColumnDef="created">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Created </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.created}} </td>
+                                        </ng-container>
+        
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                            </mat-paginator>
+                        </mat-tab>
+                    </mat-tab-group>
                 </div>
 
             </div>

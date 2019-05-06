@@ -58,346 +58,109 @@
           <div class="card">
               <div class="card-header">
                   <div>
-                        <!-- <tabset>
-                          <tab heading="Contacts" id="tab1"> -->
-                                <div id="DataTables_Table_2_wrapper"
-                                class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                <table class="table table-hover" id="products-table" role="grid"
-                                    aria-describedby="DataTables_Table_2_info">
-                                    <thead class="thead-light">
-                                        <tr role="row">
-                                            <th class="sorting_asc" tabindex="0"
-                                                aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                                aria-sort="ascending"
-                                                aria-label="Name: activate to sort column descending" > Name 
-                                    <th class=" sorting_asc" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1" aria-sort="ascending"
-                                                aria-label="Name: activate to sort column descending" >Department
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Position: activate to sort column ascending" >Email
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Office: activate to sort column ascending" >Phone
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Age: activate to sort column ascending" >Address
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Age: activate to sort column ascending" >Notes
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Age: activate to sort column ascending" >Action
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                <tr role=" row" class="odd">
-                                            <td>Acme Supplies (DEMO)</td>
-                                            <td class="sorting_1">Warehouse</td>
-                                            <td>Acme324@fmail.com</td>
-                                            <td>5467983476</td>
-                                            <td>7604 Manhattan Street Carol Stream</td>
-                                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                                                debitis.</td>
-                                            <td>
-                                                <a href="" data-toggle="modal" data-backdrop="static"
-                                                    data-target="#edit-contact">Edit</a>
-                                                <a href="#">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td>Okuneva Huel (DEMO)</td>
-                                            <td class="sorting_1">Head Office</td>
-                                            <td>mara73@reilly.com</td>
-                                            <td>3467863413</td>
-                                            <td>7604 Manhattan Street Carol Stream</td>
-                                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                                                debitis.</td>
-                                            <td>
-                                                <a href="" data-toggle="modal" data-backdrop="static"
-                                                    data-target="#edit-contact">Edit</a>
-                                                <a href="#">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td>Rice Bode (DEMO)</td>
-                                            <td class="sorting_1">Warehouse</td>
-                                            <td>abigale57@adams.org</td>
-                                            <td>5467983476</td>
-                                            <td>7604 Manhattan Street Carol Stream</td>
-                                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                                                debitis.</td>
-                                            <td>
-                                                <a href="" data-toggle="modal" data-backdrop="static"
-                                                    data-target="#edit-contact">Edit</a>
-                                                <a href="#">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td>Parisian Gutmann (DEMO)</td>
-                                            <td class="sorting_1">Laboratory</td>
-                                            <td>elroy.keebler@conroy.biz</td>
-                                            <td>7634598236</td>
-                                            <td>7604 Manhattan Street Carol Stream</td>
-                                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                                                debitis.</td>
-                                            <td>
-                                                <a href="" data-toggle="modal" data-backdrop="static"
-                                                    data-target="#edit-contact">Edit</a>
-                                                <a href="#">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td>Rodriguez and Sons (DEMO)</td>
-                                            <td class="sorting_1">Warehouse</td>
-                                            <td>rosalia.mohr@gutkowski.com</td>
-                                            <td>5467983476</td>
-                                            <td>7604 Manhattan Street Carol Stream</td>
-                                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                                                debitis.</td>
-                                            <td>
-                                                <a href="" data-toggle="modal" data-backdrop="static"
-                                                    data-target="#edit-contact">Edit</a>
-                                                <a href="#">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td>Acme Supplies (DEMO)</td>
-                                            <td class="sorting_1">Warehouse</td>
-                                            <td>Acme324@fmail.com</td>
-                                            <td>5467983476</td>
-                                            <td>7604 Manhattan Street Carol Stream</td>
-                                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                                                debitis.</td>
-                                            <td>
-                                                <a href="" data-toggle="modal" data-backdrop="static"
-                                                    data-target="#edit-contact">Edit</a>
-                                                <a href="#">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <tr role="row" class="odd text-center">
-                                            <td colspan="6">
-                                                <button type="button" data-toggle="modal" data-backdrop="static"
-                                                    data-target="#add-contact"
+                        <mat-tab-group>
+                                <mat-tab label="Contacts">
+                                        <table mat-table [dataSource]="dataSource" matSort class="">
+                                                <ng-container matColumnDef="name">
+                                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                                                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                                </ng-container>
+                        
+                                                <ng-container matColumnDef="type">
+                                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+                                                    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                                                </ng-container>
+                        
+                                                <ng-container matColumnDef="email">
+                                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+                                                    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                                                </ng-container>
+                        
+                                                <ng-container matColumnDef="phone">
+                                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>
+                                                    <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+                                                </ng-container>
+                        
+                                                <ng-container matColumnDef="address">
+                                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+                                                    <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                                                </ng-container>
+                        
+                                                <ng-container matColumnDef="status">
+                                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                                                    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                                                </ng-container>
+                        
+                                                <ng-container matColumnDef="created">
+                                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Created </th>
+                                                    <td mat-cell *matCellDef="let element"> {{element.created}} </td>
+                                                </ng-container>
+                        
+                                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                            </table>
+                                            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                                            </mat-paginator>
+<div class="text-center">
+                                            <button type="button" data-toggle="modal" data-backdrop="static"
+                                                    data-target="#add-address"
                                                     class="btn btn-outline-primary btn-sm default mb-1 mr-2">Add
                                                     Quick Contact
                                                 </button>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                </table>
-                                <div class="row view-pager">
-                                    <div class="col-sm-12">
-                                        <div class="text-center">
-                                            <!--<div class="dataTables_info" id="DataTables_Table_2_info" role="status"-->
-                                            <!--aria-live="polite">Showing 1 to 10 of 41 entries-->
-                                            <!--</div>-->
-                                            <!--<div class="dataTables_paginate paging_simple_numbers"-->
-                                            <!--id="DataTables_Table_2_paginate">-->
-                                            <!--<ul class="pagination pagination-sm">-->
-                                            <!--<li class="paginate_button page-item previous disabled"-->
-                                            <!--id="DataTables_Table_2_previous"><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="0"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link prev"><i-->
-                                            <!--class="simple-icon-arrow-left"></i></a></li>-->
-                                            <!--<li class="paginate_button page-item active"><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="1"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link">1</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="paginate_button page-item "><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="2"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link">2</a></li>-->
-                                            <!--<li class="paginate_button page-item "><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="3"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link">3</a></li>-->
-                                            <!--<li class="paginate_button page-item "><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="4"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link">4</a></li>-->
-                                            <!--<li class="paginate_button page-item "><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="5"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link">5</a></li>-->
-                                            <!--<li class="paginate_button page-item next"-->
-                                            <!--id="DataTables_Table_2_next"><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="6"-->
-                                            <!--tabindex="0" class="page-link next"><i-->
-                                            <!--class="simple-icon-arrow-right"></i></a></li>-->
-                                            <!--</ul>-->
-                                            <!--</div>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          <!-- </tab>
-                          <tab heading="Orders" id="tab2"> -->
-                                <div id="DataTables_Table_2_wrapper"
-                                class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                <table class="table table-hover" id="products-table" role="grid"
-                                    aria-describedby="DataTables_Table_2_info">
-                                    <thead class="thead-light">
-                                        <tr role="row">
-                                            <th class="sorting_asc" tabindex="0"
-                                                aria-controls="DataTables_Table_2" rowspan="1" colspan="1"
-                                                aria-sort="ascending"
-                                                aria-label="Name: activate to sort column descending" >Department
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Position: activate to sort column ascending" >Street Address
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Office: activate to sort column ascending" >City
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Age: activate to sort column ascending" >State
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Start date: activate to sort column ascending" >Country
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Start date: activate to sort column ascending">Zip Code
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Start date: activate to sort column ascending" >Phone
-                                    <th class=" sorting" tabindex="0" aria-controls="DataTables_Table_2"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Start date: activate to sort column ascending" >Action
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr role=" row" class="odd">
-                                            <td class="sorting_1">Warehouse</td>
-                                            <td>7604 Manha
-                                                ttan Street Carol Stream</td>
-                                            <td>Surrey</td>
-                                            <td>BC</td>
-                                            <td>Canada</td>
-                                            <td>
-                                                34657
-                                            </td>
-                                            <td>
-                                                4356879247
-                                            </td>
-                                            <td>
-                                                <a href="" data-toggle="modal" data-backdrop="static"
-                                                    data-target="#edit-address">Edit</a>
-                                                <a href="#">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td class="sorting_1">Warehouse</td>
-                                            <td>315 Delaware Drive Addison</td>
-                                            <td>Surrey</td>
-                                            <td>BC</td>
-                                            <td>Canada</td>
-                                            <td>
-                                                34876
-                                            </td>
-                                            <td>
-                                                4356879247
-                                            </td>
-                                            <td>
-                                                <a href="" data-toggle="modal" data-backdrop="static"
-                                                    data-target="#edit-address">Edit</a>
-                                                <a href="#">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <tr role="row" class="odd">
-                                            <td class="sorting_1">Warehouse</td>
-                                            <td>90 North Temple Ave.Royersford</td>
-                                            <td>Toronto</td>
-                                            <td>BC</td>
-                                            <td>Canada</td>
-                                            <td>
-                                                65787
-                                            </td>
-                                            <td>
-                                                4356879247
-                                            </td>
-                                            <td>
-                                                <a href="" data-toggle="modal" data-backdrop="static"
-                                                    data-target="#edit-address">Edit</a>
-                                                <a href="#">Delete</a>
-                                            </td>
-                                        </tr>
-                                        <tr role="row" class="odd text-center">
-                                            <td colspan="8">
-                                                <button type="button" data-toggle="modal" data-backdrop="static"
+                                            </div>
+                        </mat-tab>
+                        <mat-tab label="Orders">
+                                <table mat-table [dataSource]="dataSource" matSort class="">
+                                        <ng-container matColumnDef="name">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                                        </ng-container>
+                
+                                        <ng-container matColumnDef="type">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                                        </ng-container>
+                
+                                        <ng-container matColumnDef="email">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                                        </ng-container>
+                
+                                        <ng-container matColumnDef="phone">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+                                        </ng-container>
+                
+                                        <ng-container matColumnDef="address">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                                        </ng-container>
+                
+                                        <ng-container matColumnDef="status">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                                        </ng-container>
+                
+                                        <ng-container matColumnDef="created">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Created </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.created}} </td>
+                                        </ng-container>
+                
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    </table>
+                                    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                                    </mat-paginator>
+
+                                    <div class="text-center">
+                                            <button type="button" data-toggle="modal" data-backdrop="static"
                                                     data-target="#add-address"
                                                     class="btn btn-outline-primary btn-sm default mb-1 mr-2">Add
                                                     Quick Address
                                                 </button>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                </table>
-                                <div class="row view-pager">
-                                    <div class="col-sm-12">
-                                        <div class="text-center">
-                                            <!--<div class="dataTables_info" id="DataTables_Table_2_info" role="status"-->
-                                            <!--aria-live="polite">Showing 1 to 10 of 41 entries-->
-                                            <!--</div>-->
-                                            <!--<div class="dataTables_paginate paging_simple_numbers"-->
-                                            <!--id="DataTables_Table_2_paginate">-->
-                                            <!--<ul class="pagination pagination-sm">-->
-                                            <!--<li class="paginate_button page-item previous disabled"-->
-                                            <!--id="DataTables_Table_2_previous"><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="0"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link prev"><i-->
-                                            <!--class="simple-icon-arrow-left"></i></a></li>-->
-                                            <!--<li class="paginate_button page-item active"><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="1"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link">1</a>-->
-                                            <!--</li>-->
-                                            <!--<li class="paginate_button page-item "><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="2"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link">2</a></li>-->
-                                            <!--<li class="paginate_button page-item "><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="3"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link">3</a></li>-->
-                                            <!--<li class="paginate_button page-item "><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="4"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link">4</a></li>-->
-                                            <!--<li class="paginate_button page-item "><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="5"-->
-                                            <!--tabindex="0"-->
-                                            <!--class="page-link">5</a></li>-->
-                                            <!--<li class="paginate_button page-item next"-->
-                                            <!--id="DataTables_Table_2_next"><a href="#"-->
-                                            <!--aria-controls="DataTables_Table_2"-->
-                                            <!--data-dt-idx="6"-->
-                                            <!--tabindex="0" class="page-link next"><i-->
-                                            <!--class="simple-icon-arrow-right"></i></a></li>-->
-                                            <!--</ul>-->
-                                            <!--</div>-->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          <!-- </tab>
-                        </tabset> -->
+                                            </div>
+                        </mat-tab>
+                        </mat-tab-group>
                       </div>
               </div>
            

@@ -5567,3 +5567,47 @@ main {
 .theme-green .bs-datepicker-body table td.week span {
     color: #67a7d8;
 }
+
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-tab-body-content,
+.mat-tab-body.mat-tab-body-active {
+    overflow: unset !important;
+}
+
+.btn-outline-primary {
+    border: 1px solid #145388 !important;
+}
+
+table,
+.mat-tab-group {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  .mt--13 {
+      margin-top: -13px !important;
+  }
+
+  th.mat-header-cell {
+    background-color: #f3f3f3 !important;
+  }
+  .card .card-body {
+    padding: 1.75rem 1.25rem;
+  }
+
+  table .dot {
+      height: 12px;
+      width: 12px;
+      display: inline-block;
+      border: 1px solid black;
+      border-radius: 50%;
+      margin-left: 13px;
+  }
+  table .dot.active {
+    background: black
+}

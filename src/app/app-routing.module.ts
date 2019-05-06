@@ -12,6 +12,8 @@ import { OutboundComponent } from './components/inventory/outbound.component';
 import { CreateOutboundComponent } from './components/inventory/create-outbound.component';
 import { StockComponent } from './components/inventory/stock.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { ReportsComponent } from './components/reports/reports.component';
+
 
 const routes: Routes = [
   {
@@ -21,6 +23,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'reports',
+    component: ReportsComponent
   },
   {
     path: 'warehouse',

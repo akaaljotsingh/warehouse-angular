@@ -1,0 +1,397 @@
+<div class="container-fluid disable-text-selection">
+  <div class="row">
+    <div class="col-12">
+      <div class="mb-3">
+        <h1 class="font-weight-bold">Inventory Report</h1>
+        <div class="float-sm-right text-zero">
+
+
+          <button mat-button [matMenuTriggerFor]="menu"
+            class="btn btn-outline-primary default btn-sm dropdown-toggle mt-2 mr-2">Bulk Manage</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Import Locations</button>
+            <button mat-menu-item>Export Locations</button>
+            <button mat-menu-item>Edit Relationships</button>
+          </mat-menu>
+
+
+          <button type="button" class="btn btn-outline-primary btn-sm default mb-1">Help</button>
+
+        </div>
+      </div>
+    </div>
+    <!--=================-->
+  </div>
+
+  <div class="row">
+    <div class="col-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="mb-2">
+            <a class="btn pt-0 pl-0 d-inline-block d-md-none" data-toggle="collapse" href="#displayOptions"
+              role="button" aria-expanded="true" aria-controls="displayOptions">
+              Display Options
+              <i class="simple-icon-arrow-down align-middle"></i>
+            </a>
+            <div class="collapse d-md-block" id="displayOptions">
+              <div class="d-block d-md-inline-block">
+
+              </div>
+              <div class="float-md-right">
+                <form class="example-form mt--13">
+                  <mat-form-field class="example-full-width mr-3">
+                    <input matInput placeholder="Search...">
+                  </mat-form-field>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <mat-tab-group>
+            <mat-tab label="Hub">
+              <div class="clearfix">
+                <div class="form-group mb-3 float-right form-inline">
+                  <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="From date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                  <mat-form-field class="ml-4">
+                    <input matInput [matDatepicker]="picker1" placeholder="To date">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <h5 class="mb-4 mt-4">How is my business doing? What contributed to sales in this period?</h5>
+                  ###### CHART ######
+                  <div class="row mt-3">
+                    <div class="col-4">
+                      <a href="#" class="card">
+                        <div class="card-body text-center">
+                          <p class="card-text mb-0">TOTAL ORDER VALUE</p>
+                          <p class="lead text-center font-weight-bold">$ 26k</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4">
+                      <a href="#" class="card">
+                        <div class="card-body text-center">
+                          <p class="card-text mb-0">TOTAL PROFIT</p>
+                          <p class="lead text-center font-weight-bold">$ 15k</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-4">
+                      <a href="#" class="card">
+                        <div class="card-body text-center">
+                          <p class="card-text mb-0">PRODUCTS SOLD</p>
+                          <p class="lead text-center font-weight-bold">215</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <h5 class="mb-4 mt-4"> What contributed to sales in this period?</h5>
+                  <table mat-table [dataSource]="dataSource" class="">
+
+                    <ng-container matColumnDef="sno">
+                      <th mat-header-cell *matHeaderCellDef class="pr-3">
+                        #
+                      </th>
+                      <td mat-cell *matCellDef="let element" class="pr-3"> {{element.sno}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="type">
+                      <th mat-header-cell *matHeaderCellDef class="pr-3">
+                        <select id="inputState" class="form-control">
+                          <option selected="">Variant</option>
+                          <option>Assignee</option>
+                          <option>Customer</option>
+                          <option>Customer Type</option>
+                          <option>Location</option>
+                          <option>Product</option>
+                          <option>Product Brand</option>
+                          <option>Product Type</option>
+                          <option>Shipping Country</option>
+                          <option>Supplier</option>
+                        </select>
+                      </th>
+                      <td mat-cell *matCellDef="let element" class="pr-3"> {{element.type}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="order">
+                      <th mat-header-cell *matHeaderCellDef class="pl-3">
+                        <select id="inputState" class="form-control ">
+                          <option selected="">Order Value</option>
+                          <option>Order Quantity</option>
+                        </select>
+                      </th>
+                      <td mat-cell *matCellDef="let element" class="pl-3"> {{element.order}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Inventory Reports">
+              <div class="clearfix">
+                <mat-form-field class="float-right">
+                  <mat-label>Inventory Details</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let item of inventory" [value]="item.value">
+                      {{item.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <table mat-table [dataSource]="dataSource1" matSort class="">
+                <ng-container matColumnDef="product">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Product </th>
+                  <td mat-cell *matCellDef="let element"> {{element.product}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="varient">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Varient </th>
+                  <td mat-cell *matCellDef="let element"> {{element.varient}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="sku">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> SKU </th>
+                  <td mat-cell *matCellDef="let element"> {{element.sku}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="supplier">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Supplier </th>
+                  <td mat-cell *matCellDef="let element"> {{element.supplier}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="purchase">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Purchase Order </th>
+                  <td mat-cell *matCellDef="let element"> {{element.purchase}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="stock">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Stock on Hand</th>
+                  <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="incomingstock">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Incoming Stocks </th>
+                  <td mat-cell *matCellDef="let element"> {{element.incomingstock}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="totalstock">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Total cost of incoming </th>
+                  <td mat-cell *matCellDef="let element">$ {{element.totalstock}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+              </table>
+            </mat-tab>
+
+            <mat-tab label="Order Reports">
+              <div class="clearfix">
+                <mat-form-field class="float-right">
+                  <mat-label>Select Report Type</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let item of inventory" [value]="item.value">
+                      {{item.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <table mat-table [dataSource]="dataSource2" matSort class="">
+                <ng-container matColumnDef="customername">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> customername </th>
+                  <td mat-cell *matCellDef="let element"> {{element.customername}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="customertype">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> customertype </th>
+                  <td mat-cell *matCellDef="let element"> {{element.customertype}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="productname">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> productname </th>
+                  <td mat-cell *matCellDef="let element"> {{element.productname}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="productbrand">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> productbrand </th>
+                  <td mat-cell *matCellDef="let element"> {{element.productbrand}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="producttype">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> producttype </th>
+                  <td mat-cell *matCellDef="let element"> {{element.producttype}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="shippingcountry">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> shippingcountry</th>
+                  <td mat-cell *matCellDef="let element"> {{element.shippingcountry}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="supplier">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> supplier </th>
+                  <td mat-cell *matCellDef="let element"> {{element.supplier}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="varrientname">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> varrientname </th>
+                  <td mat-cell *matCellDef="let element">{{element.varrientname}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="totalsale">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> totalsale </th>
+                  <td mat-cell *matCellDef="let element">$ {{element.totalsale}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+              </table>
+            </mat-tab>
+
+            <mat-tab label="Payment Reports">
+              <div class="clearfix">
+                <mat-form-field class="float-right">
+                  <mat-label>Select Report Type</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let item of inventory" [value]="item.value">
+                      {{item.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <table mat-table [dataSource]="dataSource2" matSort class="">
+                <ng-container matColumnDef="customername">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> customername </th>
+                  <td mat-cell *matCellDef="let element"> {{element.customername}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="customertype">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> customertype </th>
+                  <td mat-cell *matCellDef="let element"> {{element.customertype}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="productname">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> productname </th>
+                  <td mat-cell *matCellDef="let element"> {{element.productname}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="productbrand">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> productbrand </th>
+                  <td mat-cell *matCellDef="let element"> {{element.productbrand}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="producttype">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> producttype </th>
+                  <td mat-cell *matCellDef="let element"> {{element.producttype}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="shippingcountry">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> shippingcountry</th>
+                  <td mat-cell *matCellDef="let element"> {{element.shippingcountry}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="supplier">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> supplier </th>
+                  <td mat-cell *matCellDef="let element"> {{element.supplier}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="varrientname">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> varrientname </th>
+                  <td mat-cell *matCellDef="let element">{{element.varrientname}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="totalsale">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> totalsale </th>
+                  <td mat-cell *matCellDef="let element">$ {{element.totalsale}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+              </table>
+            </mat-tab>
+
+            <mat-tab label="Invoice Reports">
+              <div class="clearfix">
+                <mat-form-field class="float-right">
+                  <mat-label>Select Report Type</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let item of inventory" [value]="item.value">
+                      {{item.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <table mat-table [dataSource]="dataSource2" matSort class="">
+                <ng-container matColumnDef="customername">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> customername </th>
+                  <td mat-cell *matCellDef="let element"> {{element.customername}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="customertype">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> customertype </th>
+                  <td mat-cell *matCellDef="let element"> {{element.customertype}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="productname">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> productname </th>
+                  <td mat-cell *matCellDef="let element"> {{element.productname}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="productbrand">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> productbrand </th>
+                  <td mat-cell *matCellDef="let element"> {{element.productbrand}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="producttype">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> producttype </th>
+                  <td mat-cell *matCellDef="let element"> {{element.producttype}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="shippingcountry">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> shippingcountry</th>
+                  <td mat-cell *matCellDef="let element"> {{element.shippingcountry}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="supplier">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> supplier </th>
+                  <td mat-cell *matCellDef="let element"> {{element.supplier}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="varrientname">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> varrientname </th>
+                  <td mat-cell *matCellDef="let element">{{element.varrientname}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="totalsale">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> totalsale </th>
+                  <td mat-cell *matCellDef="let element">$ {{element.totalsale}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+              </table>
+            </mat-tab>
+          </mat-tab-group>
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
