@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+
+var login;
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   onLoginClick() {
-    this.router.navigateByUrl('/dashboard');
+    login = true;
   }
 
 }

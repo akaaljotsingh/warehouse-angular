@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ChartsModule } from 'ng2-charts';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
@@ -62,6 +63,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
+  
 } from '@angular/material';
 
 
@@ -131,6 +133,7 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
