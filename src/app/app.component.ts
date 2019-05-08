@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'boilerplate';
+  title = 'Warehouse';
+  selected: any;
+  loggedIn:boolean=false;
+  receiveMessage(event) {
+    this.selected = event;
+    this.loggedIn=true;
+  }
 }

@@ -13,7 +13,6 @@ import { ChartsModule } from 'ng2-charts';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
-import { SidebarComponent } from './components/nav/sidebar.component';
 import { WarehouseComponent } from './components/warehouse/warehouse.component';
 import { CreateWarehouseComponent } from './components/warehouse/create-warehouse.component';
 import { RelationshipComponent } from './components/relationship/relationship.component';
@@ -25,6 +24,10 @@ import { CreateOutboundComponent } from './components/inventory/create-outbound.
 import { StockComponent } from './components/inventory/stock.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { ReportsComponent } from './components/reports/reports.component';
+import { WarehouseAdmin } from './components/nav/warehouse-admin.component';
+import { WarehouseOpt } from './components/nav/warehouse-opt.component';
+import { CustomerAdmin } from './components/nav/customer-admin.component';
+import { CustomerOpt } from './components/nav/customer-opt.component';
 
 
 import {
@@ -76,7 +79,6 @@ import {
     DashboardComponent,
     LoginComponent,
     NavComponent,
-    SidebarComponent,
     WarehouseComponent,
     CreateWarehouseComponent,
     RelationshipComponent,
@@ -87,7 +89,11 @@ import {
     CreateOutboundComponent,
     StockComponent,
     SettingsComponent,
-    ReportsComponent
+    ReportsComponent,
+    WarehouseAdmin,
+    WarehouseOpt,
+    CustomerAdmin,
+    CustomerOpt
 
     
   ],

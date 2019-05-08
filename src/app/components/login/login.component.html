@@ -1,5 +1,18 @@
+<div class="login-wrap">
 
+  <div>
 
-<button (click)="onLoginClick()" class="">
-  Login
-</button>
+  <mat-form-field>
+      <mat-label>User Type</mat-label>
+      <mat-select [(value)]="selected">
+          <mat-option *ngFor="let utype of logintype" [value]="utype.value">
+              {{utype.viewValue}}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+
+  <button mat-button class="btn btn-primary default btn-sm mt-2 mr-2" (click)="loginEvent()">Login</button>
+
+</div>
+
+</div>

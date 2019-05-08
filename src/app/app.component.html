@@ -1,8 +1,22 @@
 
+<!-- <div *ngIf="Login==false">
+    <app-login></app-login>
+</div> -->
 
-<app-nav></app-nav>
-<app-sidebar></app-sidebar>
-<main>
+<div *ngIf="loggedIn==false">
+    <app-login (LoginUser)="receiveMessage($event)"></app-login>
+</div>
+
+
+<app-nav *ngIf="loggedIn==true"></app-nav>
+
+    <warehouse-admin *ngIf="selected == 'w-admin'"></warehouse-admin>
+    <warehouse-opt *ngIf="selected == 'w-opt'"></warehouse-opt>
+    <customer-admin *ngIf="selected == 'c-admin'"></customer-admin>
+    <customer-opt *ngIf="selected == 'c-opt'"></customer-opt>
+
+
+<main *ngIf="loggedIn==true">
 
     <router-outlet></router-outlet>
 

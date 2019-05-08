@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { LoginComponent } from './components/login/login.component';
 import { WarehouseComponent } from './components/warehouse/warehouse.component';
 import { CreateWarehouseComponent } from './components/warehouse/create-warehouse.component';
 import { RelationshipComponent } from './components/relationship/relationship.component';
@@ -19,10 +18,6 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent
   },
   {
     path: 'reports',
