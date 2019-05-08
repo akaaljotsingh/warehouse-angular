@@ -90,7 +90,6 @@ export class DashboardComponent implements OnInit {
   ];
   public lineChartLegend = true;
   public lineChartType = 'line';
-  // public lineChartPlugins = [pluginAnnotations];
 
   foods: Food[] = [
     {value: 'steak-0', viewValue: 'Steak'},
