@@ -5611,3 +5611,15 @@ table,
   table .dot.active {
     background: black
 }
+
+.sidebar .scroll {
+    height: calc( 100vh - 90px );
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+p.m-0 {
+    font-size: 11px;
+    color: #1a3561;
+    cursor: pointer;
+}
