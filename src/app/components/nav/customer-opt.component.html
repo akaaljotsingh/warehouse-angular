@@ -37,15 +37,22 @@
                             <span> Relationships</span>
                         </a>
                     </li> -->
-                    <li>
-                        <a href="#ui">
-                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                                <path fill="#67a7d8"
-                                      d="M17,18L12,15.82L7,18V5H17M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z"/>
-                            </svg>
-                            <span>Inventory</span>
-                        </a>
-                    </li>
+                    <li class="in-nav">
+                            <a (click)='clickMe()'>
+                                <div *ngIf="flag == true" class="text-center">
+                                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="#67a7d8"
+                                            d="M17,18L12,15.82L7,18V5H17M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z" />
+                                    </svg>
+                                    <span>Inventory</span>
+                                </div>
+                                <div *ngIf="flag == false">
+                                    <p class="m-0" routerLink="/reports">Inbound Orders</p>
+                                    <p class="m-0" routerLink="/outbound">Outbound Orders</p>
+                                    <p class="m-0" routerLink="/stock">Avaliable Stock</p>
+                                </div>
+                            </a>
+                        </li>
                     <li>
                         <a href="javascript:void(0)" routerLink="/reports">
                             <svg style="width:24px;height:24px" viewBox="0 0 24 24">

@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarehouseOpt implements OnInit {
 
+  flag = true;
+
+  clickMe() {
+    this.flag = false;
+  }
+
   constructor() { }
 
   ngOnInit() {
