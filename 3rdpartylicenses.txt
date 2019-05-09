@@ -476,6 +476,8 @@ ISC
 
 @angular/material/snack-bar
 
+@angular/material/sidenav
+
 zone.js
 MIT
 The MIT License
