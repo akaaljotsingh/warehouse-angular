@@ -2548,7 +2548,8 @@ main .container-fluid {
 
 @media (max-width: 1439px) {
     main {
-        margin: 130px 50px 30px 380px
+        margin: 130px 50px 30px 380px;
+        margin-left: 160px;
     }
 }
 
@@ -5543,7 +5544,7 @@ i.custom-icon {
     display: none;
 }
 main {
-    margin: 130px 50px 30px 160px !important;
+    //margin: 130px 50px 30px 160px !important;
 }
 .ui-select-choices.dropdown-menu {
     display: block
@@ -5618,13 +5619,27 @@ table,
     overflow-x: hidden;
 }
 
-p.m-0 {
-    font-size: 11px;
-    color: #1a3561;
+mat-drawer p {
     cursor: pointer;
+}
+mat-drawer p:focus {
+    outline: none;
 }
 
 .sidebar .main-menu ul li.in-nav span {
     width: 100%;
     display: block;
+}
+
+// sidebar 
+
+.mat-drawer-container {
+    height: calc(100vh - 81px);
+    margin-left: 100px;
+    position: static;
+}
+.mat-drawer.mat-drawer-side {
+    width: 230px !important;
+    margin-left: 10px;
+    padding-left: 20px;
 }

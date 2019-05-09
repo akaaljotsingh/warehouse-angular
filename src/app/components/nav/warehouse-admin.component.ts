@@ -7,16 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarehouseAdmin implements OnInit {
 
-  flag = true;
-
-  clickMe() {
-    this.flag = false;
-  }
+  isInventoryMenuOpen:boolean=false;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { 
   }
+
+  showFiller = false;
 
 
 }
