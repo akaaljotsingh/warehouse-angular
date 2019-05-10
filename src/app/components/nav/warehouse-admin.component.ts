@@ -8,13 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class WarehouseAdmin implements OnInit {
 
   isInventoryMenuOpen:boolean=false;
+  showFiller = false;
 
   constructor() { }
 
   ngOnInit() { 
   }
-
-  showFiller = false;
-
 
 }
